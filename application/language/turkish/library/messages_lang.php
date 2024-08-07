@@ -1,0 +1,28 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['messages_support_email_sent'] = 'Bizimle iletişime geçtiğiniz için teşekkürler. En kısa sürede sizinle iletişime geçeceğiz.';
+$lang['messages_login_failed'] = 'Yanlış Kullanıcı veya Şifre - Oturum Açma Başarısız.';
+$lang['messages_password_reset_sent'] = 'Şifre sıfırlama bağlantınız yolda. Lütfen gelen kutunuzu kontrol edin.';
+$lang['messages_email_not_found'] = 'E-posta adresi mevcut değil. Lütfen kayıtlı olduğunuz e-posta hesabını kullanın.';
+$lang['messages_email_already_exists'] = 'Kullanılan e-posta adresi zaten kayıtlı. Lütfen farklı bir e-posta adresi kullanın.';
+$lang['messages_password_changed'] = 'Şifreniz değiştirildi. Artık yeni şifrenizi kullanarak giriş yapmalısınız.';
+$lang['messages_password_reset_code_invalid'] = 'Geçersiz veya Süresi Dolmuş Şifre Sıfırlama Kodu. Lütfen bağlantının tamamını kopyalayın/yapıştırın veya yeni bir bağlantı isteyin.';
+$lang['messages_verification_success'] = 'Doğrulama Başarılı. Artık tam erişime sahipsiniz.';
+$lang['messages_verification_required'] = 'Doğrulanmış bir üye değilsiniz. Doğrulama bağlantımız için lütfen e-postanızı kontrol edin. <a href="/account/resendVerificationLink">Doğrulama Bağlantısını Yeniden Gönder</a> .';
+$lang['messages_verification_failed'] = 'Geçersiz Doğrulama Kodu. Lütfen tekrar deneyin.';
+$lang['messages_verification_link_resent'] = 'Doğrulama bağlantısı e-posta adresinize yeniden gönderildi. Lütfen gelen kutunuzu kontrol edin.';
+$lang['messages_user_updated'] = 'Kullanıcı ayrıntıları güncellendi.';
+$lang['messages_user_not_updated'] = 'Kullanıcı ayrıntıları güncellenemiyor - Lütfen <a href="/support/contact">destek ekibiyle iletişime geçin</a> .';
+$lang['messages_old_password_invalid'] = 'Girdiğiniz mevcut şifreniz geçerli değil.';
+$lang['messages_photo_upload_info'] = 'Yüklemek için bilgisayarınızdan bir resim seçin. Esnemeyi en aza indirmek için fotoğrafınızın mümkün olduğunca kareye yakın ve en az 150x150 piksel boyutunda olması gerekir.';
+$lang['messages_google_captcha_failed'] = 'Google captcha doğrulaması başarısız oldu.';
+$lang['messages_login_or_register'] = 'Kayıt olmanın faydaları şunları içerir:<p><ul><li> Yeni özellikler mevcut olduğunda güncel bilgi alın.</li></ul></p>';
+$lang['messages_active_users'] = 'Aktif Kullanıcılar.';
+$lang['messages_blocked_users'] = 'Engellenmiş kullanıcılar.';
+$lang['messages_unverified_users'] = 'Doğrulanmamış Kullanıcılar.';
+$lang['messages_list_transactions'] = 'İşlem Geçmişiniz.';
+$lang['messages_translate_site'] = 'Web sitesi İngilizce&#39;den her dile çevriliyor...';
+$lang['messages_options_updated'] = 'Seçenekleriniz güncellendi.';
+$lang['messages_update_failed'] = 'Güncelleme başarısız oldu. Lütfen daha sonra tekrar deneyin veya <a href="/support/contact">destek ekibiyle iletişime geçin</a> .';
+$lang['messages_added_as_affiliate'] = 'Üye oldunuz.';
+$lang['messages_affiliates_list'] = 'İştiraklerinizin ve bilançonuzun listesi. Satış ortağı URL&#39;niz https://base_url/account/register/affiliate_code';

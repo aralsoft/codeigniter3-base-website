@@ -1,0 +1,27 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['messages_support_email_sent'] = 'Благодарим Вас за обращение к нам. Мы свяжемся с вами как можно скорее.';
+$lang['messages_login_failed'] = 'Неверный пользователь или пароль – вход неуспешный.';
+$lang['messages_password_reset_sent'] = 'Ссылка для сброса пароля уже в пути. Пожалуйста, проверьте свой почтовый ящик.';
+$lang['messages_email_not_found'] = 'Адрес электронной почты не существует. Пожалуйста, используйте учетную запись электронной почты, с которой вы зарегистрировались.';
+$lang['messages_email_already_exists'] = 'Используемый адрес электронной почты уже зарегистрирован. Пожалуйста, используйте другой адрес электронной почты.';
+$lang['messages_password_changed'] = 'Ваш пароль был изменен. С этого момента вам следует войти в систему, используя новый пароль.';
+$lang['messages_password_reset_code_invalid'] = 'Неверный или просроченный код сброса пароля. Пожалуйста, скопируйте/вставьте ссылку целиком или запросите новую ссылку.';
+$lang['messages_verification_success'] = 'Проверка успешна. Теперь у вас есть полный доступ.';
+$lang['messages_verification_required'] = 'Вы не являетесь проверенным участником. Пожалуйста, проверьте свою электронную почту, чтобы найти нашу ссылку для подтверждения. <a href="/account/resendVerificationLink">Повторно отправить ссылку для подтверждения</a> .';
+$lang['messages_verification_failed'] = 'Неверный код подтверждения. Пожалуйста, попробуйте еще раз.';
+$lang['messages_user_updated'] = 'Данные пользователя обновлены.';
+$lang['messages_user_not_updated'] = 'Невозможно обновить данные пользователя. <a href="/support/contact">Обратитесь в службу поддержки</a> .';
+$lang['messages_old_password_invalid'] = 'Введенный вами текущий пароль недействителен.';
+$lang['messages_photo_upload_info'] = 'Выберите изображение на своем компьютере для загрузки. Чтобы свести к минимуму растяжение, ваша фотография должна быть как можно ближе к квадратной форме и иметь размер не менее 150 на 150 пикселей.';
+$lang['messages_google_captcha_failed'] = 'Проверка капчи Google не удалась.';
+$lang['messages_login_or_register'] = 'Преимущества регистрации включают:<p><ul><li> Получайте обновления, когда доступны новые функции.</li></ul></p>';
+$lang['messages_active_users'] = 'Активные пользователи.';
+$lang['messages_blocked_users'] = 'Заблокированные пользователи.';
+$lang['messages_unverified_users'] = 'Непроверенные пользователи.';
+$lang['messages_list_transactions'] = 'Ваша история транзакций.';
+$lang['messages_translate_site'] = 'Веб-сайт переводится на все языки, начиная с английского...';
+$lang['messages_options_updated'] = 'Ваши параметры обновлены.';
+$lang['messages_update_failed'] = 'Не удалось обновить. Пожалуйста, повторите попытку позже или <a href="/support/contact">обратитесь в службу поддержки</a> .';
+$lang['messages_added_as_affiliate'] = 'Вы стали партнером.';
+$lang['messages_affiliates_list'] = 'Список ваших филиалов и баланс. Ваш партнерский URL: https://base_url/account/register/affiliate_code.';

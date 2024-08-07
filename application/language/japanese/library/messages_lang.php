@@ -1,0 +1,27 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['messages_support_email_sent'] = 'お問い合わせいただきありがとうございます。できるだけ早くご連絡させていただきます。';
+$lang['messages_login_failed'] = 'ユーザー名またはパスワードが正しくありません - ログインに失敗しました。';
+$lang['messages_password_reset_sent'] = 'パスワード リセット リンクが送信されます。受信トレイを確認してください。';
+$lang['messages_email_not_found'] = 'メールアドレスが存在しません。登録したメールアカウントを使用してください。';
+$lang['messages_email_already_exists'] = '使用されたメールアドレスは既に登録されています。別のメールアドレスを使用してください。';
+$lang['messages_password_changed'] = 'パスワードが変更されました。今後は新しいパスワードを使用してログインしてください。';
+$lang['messages_password_reset_code_invalid'] = 'パスワード リセット コードが無効または期限切れです。リンク全体をコピー/貼り付けするか、新しいリンクをリクエストしてください。';
+$lang['messages_verification_success'] = '検証に成功しました。これでフルアクセス権が付与されました。';
+$lang['messages_verification_required'] = 'あなたは認証されたメンバーではありません。認証リンクが記載されたメールを確認してください。<a href="/account/resendVerificationLink">認証リンクを再送信します</a>。';
+$lang['messages_verification_failed'] = '認証コードが無効です。もう一度お試しください。';
+$lang['messages_user_updated'] = 'ユーザーの詳細が更新されました。';
+$lang['messages_user_not_updated'] = 'ユーザーの詳細を更新できません -<a href="/support/contact">サポートにお問い合わせ</a>ください。';
+$lang['messages_old_password_invalid'] = '入力された現在のパスワードは無効です。';
+$lang['messages_photo_upload_info'] = 'アップロードする画像をコンピューターから選択します。伸びを最小限に抑えるために、写真はできるだけ正方形に近い形にし、少なくとも 150 x 150 ピクセルにする必要があります。';
+$lang['messages_google_captcha_failed'] = 'Google キャプチャ検証に失敗しました。';
+$lang['messages_login_or_register'] = '登録のメリットとしては、<p><ul><li>新しい機能が利用可能になったら更新してください。</li></ul></p>';
+$lang['messages_active_users'] = 'アクティブユーザー。';
+$lang['messages_blocked_users'] = 'ブロックされたユーザー。';
+$lang['messages_unverified_users'] = '未確認のユーザー。';
+$lang['messages_list_transactions'] = 'あなたの取引履歴。';
+$lang['messages_translate_site'] = 'ウェブサイトは英語からすべての言語に翻訳されています...';
+$lang['messages_options_updated'] = 'オプションが更新されました。';
+$lang['messages_update_failed'] = '更新に失敗しました。しばらくしてからもう一度お試しいただくか、<a href="/support/contact">サポートにお問い合わせください</a>。';
+$lang['messages_added_as_affiliate'] = 'あなたはアフィリエイトになりました。';
+$lang['messages_affiliates_list'] = 'アフィリエイトのリストとバランスシート。アフィリエイト URL は https://base_url/account/register/affiliate_code です。';

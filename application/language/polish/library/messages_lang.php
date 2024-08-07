@@ -1,0 +1,27 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['messages_support_email_sent'] = 'Dziękujemy za skontaktowanie się z nami. Skontaktujemy się z Tobą tak szybko, jak to możliwe.';
+$lang['messages_login_failed'] = 'Nieprawidłowy użytkownik lub hasło - logowanie nie powiodło się.';
+$lang['messages_password_reset_sent'] = 'Twój link do resetowania hasła jest już w drodze. Proszę, sprawdź swoją skrzynkę odbiorczą.';
+$lang['messages_email_not_found'] = 'Adres E-mail nie istnieje. Skorzystaj z konta e-mail, na którym się zarejestrowałeś.';
+$lang['messages_email_already_exists'] = 'Używany adres e-mail jest już zarejestrowany. Użyj innego adresu e-mail.';
+$lang['messages_password_changed'] = 'Twoje hasło zostało zmienione. Od tej chwili powinieneś logować się przy użyciu nowego hasła.';
+$lang['messages_password_reset_code_invalid'] = 'Nieprawidłowy lub wygasły kod resetowania hasła. Skopiuj/wklej cały link lub poproś o nowy link.';
+$lang['messages_verification_success'] = 'Weryfikacja przebiegła pomyślnie. Masz teraz pełny dostęp.';
+$lang['messages_verification_required'] = 'Nie jesteś zweryfikowanym członkiem. Sprawdź, czy w skrzynce e-mail znajduje się nasz link weryfikacyjny. <a href="/account/resendVerificationLink">Wyślij ponownie link weryfikacyjny</a> .';
+$lang['messages_verification_failed'] = 'Nieprawidłowy kod weryfikacyjny. Proszę spróbuj ponownie.';
+$lang['messages_user_updated'] = 'Dane użytkownika zostały zaktualizowane.';
+$lang['messages_user_not_updated'] = 'Nie można zaktualizować danych użytkownika. <a href="/support/contact">Skontaktuj się z pomocą techniczną</a> .';
+$lang['messages_old_password_invalid'] = 'Twoje obecne hasło jest nieprawidłowe.';
+$lang['messages_photo_upload_info'] = 'Wybierz obraz ze swojego komputera do przesłania. Aby zminimalizować rozciąganie, Twoje zdjęcie powinno mieć kształt jak najbardziej zbliżony do kwadratu i mieć wymiary co najmniej 150 na 150 pikseli.';
+$lang['messages_google_captcha_failed'] = 'Weryfikacja captcha Google nie powiodła się.';
+$lang['messages_login_or_register'] = 'Korzyści z rejestracji obejmują m.in.<p><ul><li> Otrzymuj aktualizacje, gdy dostępne będą nowe funkcje.</li></ul></p>';
+$lang['messages_active_users'] = 'Aktywni użytkownicy.';
+$lang['messages_blocked_users'] = 'Zablokowani użytkownicy.';
+$lang['messages_unverified_users'] = 'Niezweryfikowani użytkownicy.';
+$lang['messages_list_transactions'] = 'Twoja historia transakcji.';
+$lang['messages_translate_site'] = 'Strona internetowa jest tłumaczona na każdy język z angielskiego...';
+$lang['messages_options_updated'] = 'Twoje opcje zostały zaktualizowane.';
+$lang['messages_update_failed'] = 'Aktualizacja nie powiodła się. Spróbuj ponownie później lub <a href="/support/contact">skontaktuj się z pomocą techniczną</a> .';
+$lang['messages_added_as_affiliate'] = 'Zostałeś partnerem.';
+$lang['messages_affiliates_list'] = 'Lista Twoich oddziałów i bilans. Twój adres URL partnera to https://base_url/account/register/affiliate_code';

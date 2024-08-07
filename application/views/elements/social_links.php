@@ -1,0 +1,1 @@
+&nbsp;<a href="/account/twitter"><img src="/img/social/sign-in-with-twitter.png" alt="<?= getLanguageLine("login_with") ?> Twitter" title="<?= getLanguageLine("login_with") ?> Twitter"></a>

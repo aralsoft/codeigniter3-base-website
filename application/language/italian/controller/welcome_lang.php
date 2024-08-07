@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['index_page_title'] = '';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = '';
+$lang['hero_h1'] = 'Sito dello scheletro';
+$lang['hero_logged_in'] = 'Vai alla dashboard e inizia a lavorare.';
+$lang['hero_logged_out'] = '<a href="/account/register">Iscriviti ora</a> e inizia a registrare, analizzare e pianificare i tuoi obiettivi.';
+$lang['hero_logged_in_button'] = 'Iniziare a lavorare &quot;';
+$lang['hero_logged_out_button'] = 'Registrati gratuitamente immediatamente »';
+$lang['register_button'] = 'Registrati o accedi adesso »';
+$lang['login_with'] = 'Entra con';
+$lang['column_1_image'] = 'home-join.png';
+$lang['column_1_title'] = 'Registrati';
+$lang['column_1_text'] = 'Iscriviti istantaneamente e facilmente con la tua email o account social e inizia a configurare il tuo nuovo sito web.';
+$lang['column_2_image'] = 'home-connect.png';
+$lang['column_2_title'] = 'Configura';
+$lang['column_2_text'] = 'Rispondi ad alcune domande di base e crea automaticamente e istantaneamente un nuovo sito Web completamente funzionale.';
+$lang['column_3_image'] = 'home-socialise.png';
+$lang['column_3_title'] = 'Sviluppare';
+$lang['column_3_text'] = 'Carica i tuoi prodotti e inizia a commercializzare il tuo sito web e inizia a vendere i tuoi prodotti gratuitamente.';

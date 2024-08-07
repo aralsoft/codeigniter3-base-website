@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = '登記';
+$lang['do_not_have_account'] = '還沒有帳號 ？';
+$lang['already_member'] = '已經是會員 ？';
+$lang['forgot_password'] = '忘記密碼 ？';
+$lang['login_with'] = '或登入';
+$lang['bread_crumb'] = '我的帳戶';
+$lang['index_bread_crumb'] = '登入';
+$lang['register_bread_crumb'] = '登記';
+$lang['forgot_password_bread_crumb'] = '恢復密碼';
+$lang['index_page_title'] = '登入您的帳戶';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = '註冊成為新會員';
+$lang['register_page_lead'] = '請在下面輸入您的詳細資訊以建立新帳戶。';
+$lang['forgot_password_page_title'] = '恢復密碼';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = '重新設密碼';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = '確認你的郵件地址';
+$lang['email_verification_final_page_lead'] = '';

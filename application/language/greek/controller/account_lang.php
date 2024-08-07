@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Κανω ΕΓΓΡΑΦΗ';
+$lang['do_not_have_account'] = 'Δεν έχετε λογαριασμό ;';
+$lang['already_member'] = 'Ήδη μέλος ;';
+$lang['forgot_password'] = 'Ξεχάσατε τον κωδικό ;';
+$lang['login_with'] = 'Ή Συνδεθείτε με';
+$lang['bread_crumb'] = 'Ο λογαριασμός μου';
+$lang['index_bread_crumb'] = 'Σύνδεση';
+$lang['register_bread_crumb'] = 'Κανω ΕΓΓΡΑΦΗ';
+$lang['forgot_password_bread_crumb'] = 'Ανάκτηση κωδικού πρόσβασης';
+$lang['index_page_title'] = 'Συνδεθείτε στο λογαριασμό σας';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Εγγραφείτε ως νέο μέλος';
+$lang['register_page_lead'] = 'Εισαγάγετε τα στοιχεία σας παρακάτω για να δημιουργήσετε έναν νέο λογαριασμό.';
+$lang['forgot_password_page_title'] = 'Ανάκτηση κωδικού πρόσβασης';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Επαναφέρετε τον κωδικό πρόσβασης';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'Επιβεβαιώστε τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας';
+$lang['email_verification_final_page_lead'] = '';

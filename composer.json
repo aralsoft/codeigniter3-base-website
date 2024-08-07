@@ -1,0 +1,7 @@
+{
+    "require": {
+        "geoip2/geoip2": "^2.12",
+        "aws/aws-sdk-php": "^3.228",
+        "google/cloud-translate": "^1.12"
+    }
+}

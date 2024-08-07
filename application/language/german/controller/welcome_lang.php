@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['index_page_title'] = '';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = '';
+$lang['hero_h1'] = 'Skelett-Site';
+$lang['hero_logged_in'] = 'Gehen Sie zu Ihrem Dashboard und beginnen Sie zu arbeiten.';
+$lang['hero_logged_out'] = '<a href="/account/register">Melden Sie sich jetzt an</a> und beginnen Sie mit der Protokollierung, Analyse und Planung Ihrer Ziele.';
+$lang['hero_logged_in_button'] = 'Beginne zu arbeiten &quot;';
+$lang['hero_logged_out_button'] = 'Sofort kostenlos registrieren »';
+$lang['register_button'] = 'Jetzt registrieren oder anmelden »';
+$lang['login_with'] = 'Einloggen mit';
+$lang['column_1_image'] = 'home-join.png';
+$lang['column_1_title'] = 'Registrieren';
+$lang['column_1_text'] = 'Melden Sie sich sofort und einfach mit Ihrem E-Mail- oder Social-Media-Konto an und beginnen Sie mit der Konfiguration Ihrer neuen Website.';
+$lang['column_2_image'] = 'home-connect.png';
+$lang['column_2_title'] = 'Konfigurieren';
+$lang['column_2_text'] = 'Beantworten Sie ein paar grundlegende Fragen und erstellen Sie im Handumdrehen automatisch eine neue, voll funktionsfähige Website.';
+$lang['column_3_image'] = 'home-socialise.png';
+$lang['column_3_title'] = 'Entwickeln';
+$lang['column_3_text'] = 'Laden Sie Ihre Produkte hoch, beginnen Sie mit der Vermarktung Ihrer eigenen Website und verkaufen Sie Ihre Produkte kostenlos.';

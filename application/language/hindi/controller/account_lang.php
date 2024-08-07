@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'पंजीकरण करवाना';
+$lang['do_not_have_account'] = 'कोई खाता नहीं है ?';
+$lang['already_member'] = 'क्या पहले से ही सदस्य हैं ?';
+$lang['forgot_password'] = 'पासवर्ड भूल गए ?';
+$lang['login_with'] = 'या लॉगिन करें';
+$lang['bread_crumb'] = 'मेरा खाता';
+$lang['index_bread_crumb'] = 'लॉग इन करें';
+$lang['register_bread_crumb'] = 'पंजीकरण करवाना';
+$lang['forgot_password_bread_crumb'] = 'पासवर्ड की वसूली';
+$lang['index_page_title'] = 'अपने अकाउंट में लॉग इन करें';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'नये सदस्य के रूप में पंजीकरण करें';
+$lang['register_page_lead'] = 'नया खाता बनाने के लिए कृपया नीचे अपना विवरण दर्ज करें।';
+$lang['forgot_password_page_title'] = 'पासवर्ड की वसूली';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'पासवर्ड रीसेट';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'अपने ईमेल पते की पुष्टि करें';
+$lang['email_verification_final_page_lead'] = '';

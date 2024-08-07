@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = '登録する';
+$lang['do_not_have_account'] = 'アカウントを持っていないのですか ？';
+$lang['already_member'] = 'すでに会員ですか?';
+$lang['forgot_password'] = 'パスワードをお忘れですか ？';
+$lang['login_with'] = 'またはログイン';
+$lang['bread_crumb'] = '私のアカウント';
+$lang['index_bread_crumb'] = 'ログイン';
+$lang['register_bread_crumb'] = '登録する';
+$lang['forgot_password_bread_crumb'] = 'パスワードを回復';
+$lang['index_page_title'] = 'あなたのアカウントにログイン';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = '新規会員登録';
+$lang['register_page_lead'] = '新しいアカウントを作成するには、以下の詳細を入力してください。';
+$lang['forgot_password_page_title'] = 'パスワードを回復';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'パスワードを再設定する';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'あなたのメールアドレスを確認してください';
+$lang['email_verification_final_page_lead'] = '';

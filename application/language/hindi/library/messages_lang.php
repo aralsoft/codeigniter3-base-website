@@ -1,0 +1,27 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['messages_support_email_sent'] = 'हमसे संपर्क करने के लिए धन्यवाद। हम जल्द से जल्द आपसे संपर्क करेंगे।';
+$lang['messages_login_failed'] = 'ग़लत उपयोगकर्ता या पासवर्ड - लॉगिन असफल.';
+$lang['messages_password_reset_sent'] = 'आपका पासवर्ड रीसेट लिंक आ रहा है। कृपया अपना इनबॉक्स देखें।';
+$lang['messages_email_not_found'] = 'ईमेल पता मौजूद नहीं है। कृपया उस ईमेल खाते का उपयोग करें जिससे आपने पंजीकरण कराया है।';
+$lang['messages_email_already_exists'] = 'उपयोग किया गया ईमेल पता पहले से पंजीकृत है। कृपया कोई दूसरा ईमेल पता उपयोग करें।';
+$lang['messages_password_changed'] = 'आपका पासवर्ड बदल दिया गया है। अब से आपको अपना नया पासवर्ड इस्तेमाल करके लॉगइन करना चाहिए।';
+$lang['messages_password_reset_code_invalid'] = 'अमान्य या समाप्त पासवर्ड रीसेट कोड। कृपया संपूर्ण लिंक कॉपी/पेस्ट करें या नया लिंक अनुरोध करें।';
+$lang['messages_verification_success'] = 'सत्यापन सफल हुआ। अब आपके पास पूर्ण पहुँच है।';
+$lang['messages_verification_required'] = 'आप सत्यापित सदस्य नहीं हैं। कृपया हमारे सत्यापन लिंक के लिए अपना ईमेल जांचें। <a href="/account/resendVerificationLink">सत्यापन लिंक पुनः भेजें</a> ।';
+$lang['messages_verification_failed'] = 'अमान्य सत्यापन कोड. कृपया पुनः प्रयास करें.';
+$lang['messages_user_updated'] = 'उपयोगकर्ता विवरण अद्यतन कर दिया गया है.';
+$lang['messages_user_not_updated'] = 'उपयोगकर्ता विवरण अपडेट करने में असमर्थ - कृपया <a href="/support/contact">समर्थन से संपर्क करें</a> ।';
+$lang['messages_old_password_invalid'] = 'आपके द्वारा प्रविष्ट वर्तमान पासवर्ड मान्य नहीं है।';
+$lang['messages_photo_upload_info'] = 'अपलोड करने के लिए अपने कंप्यूटर से एक छवि चुनें। खिंचाव को कम करने के लिए, आपकी तस्वीर यथासंभव चौकोर आकार के करीब होनी चाहिए और कम से कम 150px x 150px होनी चाहिए।';
+$lang['messages_google_captcha_failed'] = 'गूगल कैप्चा सत्यापन विफल हुआ.';
+$lang['messages_login_or_register'] = 'पंजीकरण के लाभों में शामिल हैं,<p><ul><li> नई सुविधाएँ उपलब्ध होने पर अपडेट प्राप्त करें.</li></ul></p>';
+$lang['messages_active_users'] = 'सक्रिय उपयोगकर्ता.';
+$lang['messages_blocked_users'] = 'रोके गए उपयोगकर्ता।';
+$lang['messages_unverified_users'] = 'असत्यापित उपयोगकर्ता.';
+$lang['messages_list_transactions'] = 'आपका लेन-देन इतिहास.';
+$lang['messages_translate_site'] = 'वेब साइट का अंग्रेजी से हर भाषा में अनुवाद किया जा रहा है...';
+$lang['messages_options_updated'] = 'आपके विकल्प अपडेट कर दिए गए हैं.';
+$lang['messages_update_failed'] = 'अपडेट विफल हुआ। कृपया बाद में पुनः प्रयास करें या <a href="/support/contact">सहायता से संपर्क करें</a> ।';
+$lang['messages_added_as_affiliate'] = 'आपको सहबद्ध बना दिया गया है.';
+$lang['messages_affiliates_list'] = 'आपके सहयोगियों की सूची और बैलेंस शीट। आपका सहयोगी URL https://base_url/account/register/affiliate_code है';

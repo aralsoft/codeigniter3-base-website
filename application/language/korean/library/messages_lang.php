@@ -1,0 +1,27 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['messages_support_email_sent'] = '저희에게 연락해 줘서 고마워요. 최대한 빨리 연락드리겠습니다.';
+$lang['messages_login_failed'] = '잘못된 사용자 또는 비밀번호 - 로그인에 실패했습니다.';
+$lang['messages_password_reset_sent'] = '비밀번호 재설정 링크가 전송 중입니다. 받은 편지함을 확인하세요.';
+$lang['messages_email_not_found'] = '이메일 주소가 존재하지 않습니다. 등록하신 이메일 계정을 이용해 주세요.';
+$lang['messages_email_already_exists'] = '사용된 이메일 주소는 이미 등록되어 있습니다. 다른 이메일 주소를 사용해 주세요.';
+$lang['messages_password_changed'] = '당신의 비밀번호가 변경되었습니다. 지금부터 새로운 비밀번호를 사용하여 로그인하셔야 합니다.';
+$lang['messages_password_reset_code_invalid'] = '유효하지 않거나 만료된 비밀번호 재설정 코드. 전체 링크를 복사하여 붙여넣거나 새 링크를 요청하세요.';
+$lang['messages_verification_success'] = '확인에 성공했습니다. 이제 전체 액세스 권한을 갖게 되었습니다.';
+$lang['messages_verification_required'] = '인증된 회원이 아닙니다. 이메일에서 확인 링크를 확인하세요. <a href="/account/resendVerificationLink">확인 링크를 다시 보냅니다</a> .';
+$lang['messages_verification_failed'] = '잘못된 인증 코드입니다. 다시 시도해 주세요.';
+$lang['messages_user_updated'] = '사용자 세부 정보가 업데이트되었습니다.';
+$lang['messages_user_not_updated'] = '사용자 세부정보를 업데이트할 수 없습니다. <a href="/support/contact">지원팀에 문의하세요</a> .';
+$lang['messages_old_password_invalid'] = '입력한 현재 비밀번호가 유효하지 않습니다.';
+$lang['messages_photo_upload_info'] = '컴퓨터에서 업로드할 이미지를 선택하세요. 늘어짐을 최소화하려면 사진이 최대한 정사각형 모양에 가까워야 하며 크기는 최소 150x150픽셀이어야 합니다.';
+$lang['messages_google_captcha_failed'] = 'Google 보안 문자 확인에 실패했습니다.';
+$lang['messages_login_or_register'] = '등록하면 다음과 같은 혜택이 있습니다.<p><ul><li> 새로운 기능을 사용할 수 있게 되면 업데이트를 받으세요.</li></ul></p>';
+$lang['messages_active_users'] = '활성 사용자.';
+$lang['messages_blocked_users'] = '차단된 사용자.';
+$lang['messages_unverified_users'] = '확인되지 않은 사용자.';
+$lang['messages_list_transactions'] = '귀하의 거래 내역.';
+$lang['messages_translate_site'] = '웹사이트는 영어에서 모든 언어로 번역되고 있습니다...';
+$lang['messages_options_updated'] = '옵션이 업데이트되었습니다.';
+$lang['messages_update_failed'] = '업데이트가 실패. 나중에 다시 시도하거나 <a href="/support/contact">지원팀에 문의</a> 하세요.';
+$lang['messages_added_as_affiliate'] = '제휴사가 되셨습니다.';
+$lang['messages_affiliates_list'] = '계열사 목록 및 대차대조표. 귀하의 제휴 URL은 https://base_url/account/register/affiliate_code입니다.';
