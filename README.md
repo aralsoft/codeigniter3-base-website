@@ -32,7 +32,7 @@ Improved Codeigniter v3 web site framework.
 * chmod 777 application/data
 * chmod 777 -R application/language
 * chmod 777 -R httpdocs/img/users
-* composer install 
+* composer install (--ignore-platform-reqs if required)
 
 ### Initial Setup
 
