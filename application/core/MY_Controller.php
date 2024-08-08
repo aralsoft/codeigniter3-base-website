@@ -127,39 +127,47 @@ class MY_Controller extends CI_Controller
 
     public function setUserLog(): bool
     {
-        $this->config->load('maxmind');
-
         $ip = $this->input->ip_address();
 
-        $accountId = $this->config->item('maxmind_accountId');
-        $licenceKey = $this->config->item('maxmind_licenceKey');
-
-        if ($ip && $accountId && $licenceKey && !in_array($ip, $this->ignoredIPAddresses))
+        if ($this->config->item('keep_user_logs') && !in_array($ip, $this->ignoredIPAddresses))
         {
-            $saveToCache = 0;
+            $this->config->load('maxmind');
 
-            try {
-                if (!$record = $this->cache->get($ip)) {
-                    $client = new Client($accountId, $licenceKey);
-                    $record = $client->city($ip);
-                    $saveToCache = 1;
-                }
+            $accountId = $this->config->item('maxmind_accountId');
+            $licenceKey = $this->config->item('maxmind_licenceKey');
 
-                if ($record) {
-                    $this->countryCode = $record->country->isoCode;
-                    $this->state = $record->mostSpecificSubdivision->name;
-                    $this->city = ($record->city->name) ? : 'Unknown';
-                    $this->postCode = $record->postal->code;
-                    $this->latitude = $record->location->latitude;
-                    $this->longitude = $record->location->longitude;
-                    $this->accuracy_radius = $record->location->accuracyRadius;
+            if ($accountId && $licenceKey)
+            {
+                $saveToCache = 0;
 
-                    if ($saveToCache) {
-                        $this->cache->save($ip, $record, 86400);
+                try
+                {
+                    if (!$record = $this->cache->get($ip))
+                    {
+                        $client = new Client($accountId, $licenceKey);
+                        $record = $client->city($ip);
+                        $saveToCache = 1;
                     }
+
+                    if ($record)
+                    {
+                        $this->countryCode = $record->country->isoCode;
+                        $this->state = $record->mostSpecificSubdivision->name;
+                        $this->city = ($record->city->name) ?: 'Unknown';
+                        $this->postCode = $record->postal->code;
+                        $this->latitude = $record->location->latitude;
+                        $this->longitude = $record->location->longitude;
+                        $this->accuracy_radius = $record->location->accuracyRadius;
+
+                        if ($saveToCache) {
+                            $this->cache->save($ip, $record, 86400);
+                        }
+                    }
+
                 }
-            } catch (Exception $e) {
-                $this->notifyError('Maxmind Error : '.$e->getMessage());
+                catch (Exception $e) {
+                    $this->notifyError('Error: Maxmind API : ' . $e->getMessage());
+                }
             }
 
             if (!in_array($this->controller, $this->dataControllers))
@@ -182,6 +190,8 @@ class MY_Controller extends CI_Controller
                 if ($this->User_logs->insert($data)) {
                     return TRUE;
                 }
+
+                $this->notifyError('Error: Unable to add User Log.');
             }
 
         }

@@ -10,6 +10,7 @@ $config['g-recaptcha-url'] = 'https://www.google.com/recaptcha/api/siteverify';
 
 $config['ga-tracking-id'] = '';
 
+$config['keep_user_logs'] = TRUE;
 $config['verification_email_interval'] = 60;
 
 $config['encryption_key'] = 'Mobil609!$Tuvok5174#';
