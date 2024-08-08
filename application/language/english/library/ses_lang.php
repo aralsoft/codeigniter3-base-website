@@ -16,5 +16,5 @@ $lang['ses_change_password_body'] = 'Dear <user_name>, <br /><br />We are lettin
 $lang['ses_contact_subject'] = 'Contact Request';
 $lang['ses_contact_body'] = '<user_name> <br /><br /> <user_message>';
 
-$lang['ses_error_subject'] = 'Cron ERROR - <common_app_name>';
-$lang['ses_error_body'] = 'Hi<br/><br/><error_msg>';
+$lang['ses_error_subject'] = 'ERROR - <common_app_name>';
+$lang['ses_error_body'] = 'Hi<br/><br/>Error: <error_msg>';

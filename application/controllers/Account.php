@@ -270,7 +270,7 @@ class Account extends MY_Controller
             redirect('/dashboard');
         }
 
-        $this->processError("Error: Unable to unsubscribe. Please contact support.");
+        $this->processError("Unable to unsubscribe. Please contact support.");
     }
     
 }

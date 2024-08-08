@@ -59,7 +59,7 @@ class MY_Controller extends CI_Controller
         {
             if ($this->isLocked() || !$this->lock())
             {
-                $this->processError('Error: script locked or unable to lock.');
+                $this->processError('Cron script locked or unable to lock.');
                 exit;
             }
         }
@@ -166,7 +166,7 @@ class MY_Controller extends CI_Controller
 
                 }
                 catch (Exception $e) {
-                    $this->notifyError('Error: Maxmind API : ' . $e->getMessage());
+                    $this->notifyError('Maxmind API : ' . $e->getMessage());
                 }
             }
 
@@ -191,7 +191,7 @@ class MY_Controller extends CI_Controller
                     return TRUE;
                 }
 
-                $this->notifyError('Error: Unable to add User Log.');
+                $this->notifyError('Unable to add User Log.');
             }
 
         }
