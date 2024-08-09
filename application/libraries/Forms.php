@@ -153,7 +153,7 @@ class Forms
 
     public function getElementCode($name, array $element)
     {
-        $formGroupClass = $this->getFormGroupClass($element['type']);
+        $formGroupClass = $this->getFormGroupClass($element);
         $labelClass = $this->getLabelClass($element['type']);
         $class = $this->getInputClass($element['type']);
         $label = $this->CI->getLanguageText($name);
@@ -274,9 +274,9 @@ class Forms
         return $result;
     }
 
-    public function getFormGroupClass($type)
+    public function getFormGroupClass($element)
     {
-        switch ($type)
+        switch ($element['type'])
         {
             case 'button' :
                 if ($this->mode == 'inline') {
@@ -286,6 +286,11 @@ class Forms
                 return 'form-group mt-4';
 
             case 'checkbox' :
+
+                if (isset($element['orientation']) && $element['orientation'] == 'vertical') {
+                    return 'form-group form-check form-check-inline';
+                }
+
                 return 'form-group form-check';
 
             default :
@@ -395,7 +400,7 @@ class Forms
     public function getFormFooter($hiddenFields)
     {
         // Open footer group
-        $formGroupClass = $this->getFormGroupClass('button');
+        $formGroupClass = $this->getFormGroupClass(array('type' => 'button'));
         $result = '<div class="'.$formGroupClass.'">';
 
         // Add hidden input.
@@ -427,7 +432,7 @@ class Forms
     {
         $result = '';
 
-        $formGroupClass = $this->getFormGroupClass('g-recaptcha');
+        $formGroupClass = $this->getFormGroupClass(array('type' => 'g-recaptcha'));
 
         if ($this->CI->config->item('g-recaptcha-sitekey') && $this->CI->isLive) {
             $result .= '<div class="'.$formGroupClass.'">';
