@@ -12,8 +12,8 @@ DROP TABLE IF EXISTS `constants`;
 CREATE TABLE `constants` (
     `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
     `name` varchar(255) NOT NULL,
-    `order` tinyint(3) unsigned NOT NULL,
     `value` text NOT NULL,
+    `order` tinyint(3) unsigned NOT NULL,
     `status` tinyint(3) unsigned NOT NULL DEFAULT 1,
     `add_date` datetime DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
