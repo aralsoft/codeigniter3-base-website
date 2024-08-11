@@ -8,7 +8,7 @@ function createViewTable(array $table)
     $pages = "";
 
     // Configure pagination
-    if (is_array($table['data']) && count($table['data']))
+    if (isset($table['data']) && is_array($table['data']) && count($table['data']))
     {
         $CI->load->library('pagination');
 

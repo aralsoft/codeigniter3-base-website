@@ -46,6 +46,7 @@ $lang['my_wall'] = 'My Wall';
 $lang['name'] = 'Name';
 $lang['nick_name'] = 'Nick Name';
 $lang['no'] = 'No';
+$lang['no_data'] = 'No Data Found...';
 $lang['not_verified'] = 'Not Verified';
 $lang['options'] = 'Options';
 $lang['password'] = 'Password';

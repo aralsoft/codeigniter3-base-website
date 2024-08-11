@@ -6,6 +6,7 @@ class Tables
     public $attributes = array("class" => "table");
     public $columns = array();
     public $data = array();
+    public $firstDataRow = array();
     public $actions = array();
     
     // CodeIgniter super-object
@@ -18,65 +19,46 @@ class Tables
 
         $this->CI->load->helper(array('array'));
 
-        $columns = array();
-        $data = array();
-
-        if (array_key_exists('attributes', $parameters)) {
-            $this->attributes = $parameters['attributes'];
+        if (isset($parameters['attributes']) && is_array($parameters['attributes'])) {
+            $this->attributes = array_merge($this->attributes, $parameters['attributes']);
         }
 
-        if (array_key_exists('columns', $parameters)) {
-            $columns = $parameters['columns'];
+        if (isset($parameters['columns']) && is_array($parameters['columns'])) {
+            $this->columns = $parameters['columns'];
         }
 
-        if (array_key_exists('data', $parameters)) {
-            $data = $parameters['data'];
+        if (isset($parameters['data']) && is_array($parameters['data']) && count($parameters['data'])) {
+            $this->data = $parameters['data'];
+            $this->firstDataRow = reset($this->data);
         }
 
-        if (array_key_exists('actions', $parameters)) {
+        if (isset($parameters['actions']) && is_array($parameters['actions'])) {
             $this->actions = $parameters['actions'];
         }
 
-        if (is_array($data) && count($data))
+        if (count($this->columns))
         {
-            $firstRow = reset($data);
-
-            if (is_array($columns) && count($columns))
+            foreach ($this->columns as $key => $value)
             {
-                foreach ($columns AS $key => $value)
-                {
-                    if (is_array($value)) {
-                        $this->columns[$key] = $value;
-                    } else {
-                        $this->columns[$key] = array();
-                    }
-
-                    if (!isset($value['title'])) {
-                        $this->columns[$key]['title'] = $key;
-                    }
-
-                    if (!isset($value['format'])) {
-                        $this->columns[$key]['format'] = 'text';
-                    }
-                }
-            } else {
-                foreach ($firstRow AS $key => $value) {
+                if (!is_array($value)) {
                     $this->columns[$key] = array('title' => $key, 'format' => 'text');
+                    continue;
+                }
+
+                if (!isset($value['title'])) {
+                    $this->columns[$key]['title'] = $key;
+                }
+
+                if (!isset($value['format'])) {
+                    $this->columns[$key]['format'] = 'text';
                 }
             }
-
-            if (keys_are_equal($firstRow, $this->columns)) {
-                foreach ($data as $rowNum => $row) {
-                    $this->data[$rowNum] = $row;
-                }
-            } else {
-                foreach ($data as $rowNum => $row) {
-                    foreach ($this->columns as $key => $column) {
-                        $this->data[$rowNum][$key] = $row[$key];
-                    }
-                }
+        }
+        else
+        {
+            foreach ($this->firstDataRow as $key => $value) {
+                $this->columns[$key] = array('title' => $key, 'format' => 'text');
             }
-
         }
 
     }
@@ -90,108 +72,109 @@ class Tables
         {
             $totals = array();
 
-            $result = $this->getRowHeader($result);
+            $result .= $this->getRowHeader();
 
-            foreach ($this->data AS $dataRow)
-            {
-                $id = 0;
+            if (count($this->data)) {
+                foreach ($this->data as $dataRow) {
+                    $id = 0;
+                    $result .= '<tr>';
 
-                $result .= '<tr>';
+                    foreach ($dataRow as $key => $value) {
+                        if (isset($this->columns[$key])) {
+                            $result .= '<td>';
 
-                foreach ($dataRow AS $key => $value)
-                {
-                    if ($value)
-                    {
-                        switch ($this->columns[$key]['format'])
-                        {
-                            case 'date' :
-                                $dateFormat = 'd-m-y';
-                                if (isset($this->columns[$key]['date_format'])) {
-                                    $dateFormat = $this->columns[$key]['date_format'];
-                                }
+                            switch ($this->columns[$key]['format']) {
+                                case 'date' :
 
-                                $result .= '<td>' . date($dateFormat, strtotime($value)) . '</td>';
-                                break;
+                                    $dateFormat = 'd-m-y';
+                                    if (isset($this->columns[$key]['date_format'])) {
+                                        $dateFormat = $this->columns[$key]['date_format'];
+                                    }
 
-                            case 'number' :
-                            case 'currency' :
-                            case 'crypto' :
-                            case 'percentage' :
-                                $result .= '<td>' . formatNumber($value, $this->columns[$key]) . '</td>';
-                                break;
+                                    $result .= date($dateFormat, strtotime($value));
 
-                            case 'image' :
-                                $images = explode('|', $value);
-                                $result .= '<td><img src="' . reset($images) . '" width="75" height="75"></td>';
-                                break;
+                                    break;
 
-                            case 'function' :
-                                $result .= '<td>'.$this->executeFunction($key, $value).'</td>';
-                                break;
+                                case 'number' :
+                                case 'currency' :
+                                case 'crypto' :
+                                case 'percentage' :
 
-                            default:
-                                $result .= '<td>' . $value . '</td>';
+                                    $result .= formatNumber($value, $this->columns[$key]);
+                                    break;
+
+                                case 'image' :
+
+                                    $images = explode('|', $value);
+                                    if (is_array($images) && count($images)) {
+                                        $result .= '<img src="' . reset($images) . '" width="75" height="75">';
+                                    }
+
+                                    break;
+
+                                case 'function' :
+
+                                    $result .= $this->executeFunction($key, $value);
+                                    break;
+
+                                default:
+
+                                    $result .= $value;
+
+                            }
+
+                            $result .= '</td>';
+
+                            if (isset($this->columns[$key]['total'])) {
+                                $totals[$key] += $value;
+                            }
+
                         }
 
                         if ($key == 'id') {
                             $id = strtolower($value);
                         }
+
                     }
-                    else
-                    {
-                        switch ($this->columns[$key]['format'])
-                        {
-                            case 'number' :
-                            case 'currency' :
-                            case 'crypto' :
-                            case 'percentage' :
-                                $result .= '<td>' . formatNumber(0, $this->columns[$key]) . '</td>';
-                                break;
 
-                            case 'function' :
-                                $result .= '<td>'.$this->executeFunction($key, $value).'</td>';
-                                break;
+                    $result .= $this->getActions($id, $dataRow);
 
-                            default:
-                                $result .= '<td>&nbsp;</td>';
+                    $result .= '</tr>';
+                }
+
+                if (count($totals)) {
+                    $result .= '<tr>';
+
+                    foreach ($this->columns as $key => $value) {
+                        if (isset($this->columns[$key]['total'])) {
+                            $result .= '<td>' . formatNumber($totals[$key], $this->columns[$key]) . '</td>';
+                        } else {
+                            $result .= '<td>&nbsp;</td>';
                         }
                     }
 
-                    if (isset($this->columns[$key]['total'])) {
-                        $totals[$key] += $value;
-                    }
-                }
-
-                $result .= $this->getActions($id, $dataRow);
-
-                $result .= '</tr>';
-            }
-
-            if (count($totals))
-            {
-                $result .= '<tr>';
-
-                $firstRow = reset($this->data);
-
-                foreach ($firstRow AS $key => $value) {
-                    if ($this->columns[$key]['total']) {
-                        $result .= '<td>' . formatNumber($totals[$key], $this->columns[$key]) . '</td>';
-                    } else {
+                    if (count($this->actions)) {
                         $result .= '<td>&nbsp;</td>';
                     }
+
+                    $result .= '</tr>';
                 }
+            }
+            else
+            {
+                $numberOfColumns = count($this->columns);
 
                 if (count($this->actions)) {
-                    $result .= '<td>&nbsp;</td>';
+                    $numberOfColumns += 1;
                 }
 
-                $result .= '</tr>';
+                $result .= '<tr><td colspan="'.$numberOfColumns.'">'.$this->CI->getLanguageText('no_data').'</td></tr>';
             }
 
             $result .= "</tbody>";
         }
         else {
-            $result .= '<tr><td>No Data Found...</td></tr>';
+            $result .= '<tr><td>'.$this->CI->getLanguageText('no_data').'</td></tr>';
         }
 
         $result .= '</table>';
@@ -207,24 +190,18 @@ class Tables
         {
             $result .= '<td NOWRAP>';
 
-            foreach ($this->actions AS $action)
-            {
-                $showAction = TRUE;
-
+            foreach ($this->actions AS $action) {
                 if (array_key_exists('conditions', $action)) {
                     if (is_array($action['conditions']) && count($action['conditions'])) {
                         foreach ($action['conditions'] AS $conditionKey => $condition) {
                             if ($condition != $dataRow[$conditionKey]) {
-                                $showAction = FALSE;
-                                break;
+                                continue 2;
                             }
                         }
                     }
                 }
 
-                if ($showAction ) {
-                    $result .= '<a class="btn btn-' . $action['class'] . ' mr-2" href="' . $action['link'] . '/' . $id . '">' . $this->CI->getLanguageText($action['text']) . '</a>';
-                }
+                $result .= '<a class="btn btn-' . $action['class'] . ' mr-2" href="' . $action['link'] . '/' . $id . '">' . $this->CI->getLanguageText($action['text']) . '</a>';
             }
 
             $result .= '</td>';
@@ -236,6 +213,7 @@ class Tables
     public function executeFunction($key, $value)
     {
         $functionName = $this->columns[$key]['function_name'];
+
         return $functionName($value);
     }
 
@@ -252,10 +230,9 @@ class Tables
         return $result;
     }
 
-    public function getRowHeader($result)
+    public function getRowHeader()
     {
-        $result .= "<thead class='thead-light'>
-            <tr>";
+        $result = "<thead class='thead-light'><tr>";
 
         foreach ($this->columns AS $column) {
             $result .= '<th>' . $this->CI->getLanguageText($column['title']) . '</th>';
@@ -265,9 +242,7 @@ class Tables
             $result .= '<th>' . $this->CI->getLanguageText('actions') . '</th>';
         }
 
-        $result .= "</tr>
-            </thead>
-            <tbody>";
+        $result .= "</tr></thead><tbody>";
 
         return $result;
     }

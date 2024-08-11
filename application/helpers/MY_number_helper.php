@@ -2,6 +2,10 @@
 
 function formatNumber($value, $attributes = array())
 {
+    if (!is_numeric($value)) {
+        $value = 0;
+    }
+
     $format = 'number';
     $decimals = 0;
     $currency = "USD";
@@ -12,18 +16,22 @@ function formatNumber($value, $attributes = array())
         }
     }
 
-    if (!isset($attributes['decimals']) && ($format == 'currency' || $format == 'percentage' || $format == 'crypto')) {
+    if (!isset($attributes['decimals']) && $format == 'currency') {
         $decimals = 2;
     }
 
+    if (!isset($attributes['decimals']) && $format == 'crypto') {
+        $decimals = 8;
+    }
+
     if (!isset($attributes['currency']) && $format == 'crypto') {
-        $currency = 'TRX';
+        $currency = 'BTC';
     }
 
     switch($format)
     {
         case 'currency' :
-            $result = getCurrencySymbol($currency).number_format($value, $decimals);
+            $result = getCurrencySymbol($currency).' '.number_format($value, $decimals);
             break;
 
         case 'percentage' :
@@ -51,15 +59,18 @@ function formatNumber($value, $attributes = array())
 
 function getCurrencySymbol($currency = "USD")
 {
-    switch($currency)
-    {
-        case 'GBP' :
-            $currencySymbol = '£';
-            break;
+    $currencySymbols = array(
+        'EUR' => '&#8364;',
+        'GBP' => '&#163;',
+        'JPY' => '&#165;',
+        'USD' => '&#36;',
+    );
 
-        default :
-            $currencySymbol = '$';
+    $currency = strtoupper($currency);
+
+    if (isset($currencySymbols[$currency])) {
+        return $currencySymbols[$currency];
     }
 
-    return $currencySymbol;
+    return $currency;
 }

@@ -166,6 +166,12 @@ class Dashboard extends MY_Controller
     // List all bets for user
     public function transactions()
     {
+        $this->load->helper('table');
+
+        $table = array();
+
+        $this->viewData['pages'] = createViewTable($table);
+
         $this->messages->addMessage('list_transactions', 'info');
 
         $this->load->view('index', $this->viewData);
