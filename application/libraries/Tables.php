@@ -17,8 +17,6 @@ class Tables
     {
         $this->CI =& get_instance();
 
-        $this->CI->load->helper(array('array'));
-
         if (isset($parameters['attributes']) && is_array($parameters['attributes'])) {
             $this->attributes = array_merge($this->attributes, $parameters['attributes']);
         }
@@ -75,52 +73,46 @@ class Tables
             $result .= $this->getRowHeader();
 
             if (count($this->data)) {
-                foreach ($this->data as $dataRow) {
+                foreach ($this->data as $dataRow)
+                {
                     $id = 0;
                     $result .= '<tr>';
 
                     foreach ($dataRow as $key => $value) {
-                        if (isset($this->columns[$key])) {
+                        if (isset($this->columns[$key]))
+                        {
                             $result .= '<td>';
 
-                            switch ($this->columns[$key]['format']) {
+                            switch ($this->columns[$key]['format'])
+                            {
                                 case 'date' :
-
                                     $dateFormat = 'd-m-y';
                                     if (isset($this->columns[$key]['date_format'])) {
                                         $dateFormat = $this->columns[$key]['date_format'];
                                     }
-
                                     $result .= date($dateFormat, strtotime($value));
-
                                     break;
 
                                 case 'number' :
                                 case 'currency' :
                                 case 'crypto' :
                                 case 'percentage' :
-
                                     $result .= formatNumber($value, $this->columns[$key]);
                                     break;
 
                                 case 'image' :
-
                                     $images = explode('|', $value);
                                     if (is_array($images) && count($images)) {
                                         $result .= '<img src="' . reset($images) . '" width="75" height="75">';
                                     }
-
                                     break;
 
                                 case 'function' :
-
                                     $result .= $this->executeFunction($key, $value);
                                     break;
 
                                 default:
-
                                     $result .= $value;
-
                             }
 
                             $result .= '</td>';
@@ -138,43 +130,19 @@ class Tables
                     }
 
                     $result .= $this->getActions($id, $dataRow);
-
                     $result .= '</tr>';
                 }
 
-                if (count($totals)) {
-                    $result .= '<tr>';
-
-                    foreach ($this->columns as $key => $value) {
-                        if (isset($this->columns[$key]['total'])) {
-                            $result .= '<td>' . formatNumber($totals[$key], $this->columns[$key]) . '</td>';
-                        } else {
-                            $result .= '<td>&nbsp;</td>';
-                        }
-                    }
-
-                    if (count($this->actions)) {
-                        $result .= '<td>&nbsp;</td>';
-                    }
-
-                    $result .= '</tr>';
-                }
+                $result .= $this->getTotalsRow($totals);
             }
-            else
-            {
-                $numberOfColumns = count($this->columns);
-
-                if (count($this->actions)) {
-                    $numberOfColumns += 1;
-                }
-
-                $result .= '<tr><td colspan="'.$numberOfColumns.'">'.$this->CI->getLanguageText('no_data').'</td></tr>';
+            else {
+                $result .= $this->getNoDataRow();
             }
 
             $result .= "</tbody>";
         }
         else {
-            $result .= '<tr><td>'.$this->CI->getLanguageText('no_data').'</td></tr>';
+            $result .= $this->getNoDataRow();
         }
 
         $result .= '</table>';
@@ -190,14 +158,19 @@ class Tables
         {
             $result .= '<td NOWRAP>';
 
-            foreach ($this->actions AS $action) {
-                if (array_key_exists('conditions', $action)) {
-                    if (is_array($action['conditions']) && count($action['conditions'])) {
-                        foreach ($action['conditions'] AS $conditionKey => $condition) {
-                            if ($condition != $dataRow[$conditionKey]) {
-                                continue 2;
-                            }
+            foreach ($this->actions AS $action)
+            {
+                if (isset($action['conditions']) && is_array($action['conditions'])) {
+                    foreach ($action['conditions'] AS $conditionKey => $condition) {
+                        if ($condition != $dataRow[$conditionKey]) {
+                            continue 2;
                         }
+                    }
+                }
+
+                if (isset($action['parameters']) && is_array($action['parameters'])) {
+                    if (in_array('omitID', $action['parameters'])) {
+                        $id = '';
                     }
                 }
 
@@ -208,6 +181,48 @@ class Tables
         }
 
         return $result;
+    }
+
+    public function getTotalsRow($totals)
+    {
+        $result = '';
+
+        if (count($totals))
+        {
+            $result .= '<tr>';
+
+            foreach ($this->columns as $key => $value) {
+                if (isset($this->columns[$key]['total'])) {
+                    $result .= '<td>' . formatNumber($totals[$key], $this->columns[$key]) . '</td>';
+                } else {
+                    $result .= '<td>&nbsp;</td>';
+                }
+            }
+
+            if (count($this->actions)) {
+                $result .= '<td>&nbsp;</td>';
+            }
+
+            $result .= '</tr>';
+        }
+
+        return $result;
+    }
+
+    public function getNoDataRow()
+    {
+        $colspan = '';
+
+        if ($numberOfColumns = count($this->columns))
+        {
+            if (count($this->actions)) {
+                $numberOfColumns += 1;
+            }
+
+            $colspan = ' colspan="'.$numberOfColumns.'"';
+        }
+
+        return '<tr><td'.$colspan.'>'.$this->CI->getLanguageText('no_data').'</td></tr>';
     }
 
     public function executeFunction($key, $value)
