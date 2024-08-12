@@ -19,6 +19,7 @@ $lang['active'] = 'Active';
 $lang['add_date'] = 'Creation Date';
 $lang['admin'] = 'Admin';
 $lang['affiliate_dashboard'] = 'Affiliate Dashboard';
+$lang['are_you_sure'] = 'Are you sure ?';
 $lang['become_affiliate'] = 'Become an Affiliate';
 $lang['become_affiliate_approve'] = 'I would like to become an affiliate.';
 $lang['cancel'] = 'Cancel';

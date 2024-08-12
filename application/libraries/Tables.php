@@ -168,13 +168,29 @@ class Tables
                     }
                 }
 
-                if (isset($action['parameters']) && is_array($action['parameters'])) {
-                    if (in_array('omitID', $action['parameters'])) {
+                $confirmClick = '';
+
+                if (isset($action['parameters']) && is_array($action['parameters']))
+                {
+                    $parameters = $action['parameters'];
+
+                    if (isset($parameters['omitID']) && $parameters['omitID']) {
                         $id = '';
                     }
+
+                    if (isset($parameters['confirm']) && $parameters['confirm'])
+                    {
+                        $confirmText = $this->CI->getLanguageText('are_you_sure');
+                        if (isset($parameters['confirmText']) && $parameters['confirmText']) {
+                            $confirmText = $parameters['confirmText'];
+                        }
+
+                        $confirmClick = ' onclick="return confirm(\''.$this->CI->getLanguageText($confirmText).'\');"';
+                    }
+
                 }
 
-                $result .= '<a class="btn btn-' . $action['class'] . ' mr-2" href="' . $action['link'] . '/' . $id . '">' . $this->CI->getLanguageText($action['text']) . '</a>';
+                $result .= '<a class="btn btn-' . $action['class'] . ' mr-2" href="' . $action['link'] . '/' . $id . '"' . $confirmClick . '>' . $this->CI->getLanguageText($action['text']) . '</a>';
             }
 
             $result .= '</td>';

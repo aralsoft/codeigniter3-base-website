@@ -1,6 +1,6 @@
 <?php
 
-function getLanguageLine($key, $dynamic = FALSE)
+function getLanguageLine($key)
 {
     $CI = get_instance();
 
