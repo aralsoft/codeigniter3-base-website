@@ -180,7 +180,7 @@ class Tables
 
                     if (isset($parameters['confirm']) && $parameters['confirm'])
                     {
-                        $confirmText = $this->CI->getLanguageText('are_you_sure');
+                        $confirmText = 'are_you_sure';
                         if (isset($parameters['confirmText']) && $parameters['confirmText']) {
                             $confirmText = $parameters['confirmText'];
                         }
