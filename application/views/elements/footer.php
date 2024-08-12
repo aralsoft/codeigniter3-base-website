@@ -7,8 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="col-12 text-center">
                     <p class="mt-4 mb-2">
-                        <a href="/support/content/contentid/6"><?= getLanguageLine("products") ?></a>
-                        &nbsp;&nbsp; | &nbsp;&nbsp;<a href="/support/content/contentid/8"><?= getLanguageLine("faqs") ?></a>
+                        <a href="/support/content/contentid/2"><?= getLanguageLine("products") ?></a>
+                        &nbsp;&nbsp; | &nbsp;&nbsp;<a href="/support/content/contentid/3"><?= getLanguageLine("faqs") ?></a>
                         &nbsp;&nbsp; | &nbsp;&nbsp;<a href="/support/content/contentid/1"><?= getLanguageLine("about_us") ?></a>
                         &nbsp;&nbsp; | &nbsp;&nbsp;<a href="/support/contact"><?= getLanguageLine("contact_us") ?></a>
                     </p>
