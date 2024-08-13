@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body>
         
-    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
 
     <div class="position-relative overflow-hidden">
 

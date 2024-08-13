@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div class="col-12 text-center">
                     <hr>
-                    <p class="mb-0">© Copyright <?= date('Y'); ?> <?= getLanguageLine("common_app_name") ?></p>
+                    <p class="mb-1 text-muted small">© Copyright <?= date('Y'); ?> <?= getLanguageLine("common_app_name") ?></p>
                 </div>
             </div>
         </div>
