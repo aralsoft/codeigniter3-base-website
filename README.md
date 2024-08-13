@@ -21,12 +21,15 @@ Improved Codeigniter v3 web site framework.
 
 * Bootstrap 4.3.1
 * Jquery 3.4.1
+* Google Translate API
+* AWS API (For sending emails)
+* Maxmind API
 
 ### Installation:
 
 * Create database. 
 * Change admin user data in sql/db.sql and import db.sql into database.
-* Edit files application/config/config.php, database.php, aws.php, maxmind.php
+* Edit files application/config/config.php, database.php, aws.php, maxmind.php, google.php
 * chmod 777 application/cache
 * chmod 777 application/logs
 * chmod 777 application/tmp
@@ -44,11 +47,11 @@ Improved Codeigniter v3 web site framework.
 
 ### Cron Jobs
 
-* php /var/www/html/XXXXXXX/httpdocs/index.php cli Daily
+* php /var/www/html/httpdocs/index.php cli Daily
 
 #### Add here to run more frequently than every minute
 
-* /var/www/html/XXXXXXX/application/controllers/cli/cronJobs.sh
+* /var/www/html/application/controllers/cli/cronJobs.sh
 
 #### Get rid off bad formatting with:
 
@@ -57,4 +60,4 @@ Improved Codeigniter v3 web site framework.
 
 ### Translate Site
 
-php /var/www/html/XXXXXXX/httpdocs/index.php cli Translate
+php /var/www/html/httpdocs/index.php cli Translate
