@@ -43,6 +43,34 @@ class MY_Controller extends CI_Controller
 
     public $autoLoginMethods = array('account' => array('unsubscribe'));
 
+    public $languageNamesByCountry = array(
+        'ES' => 'spanish',
+        'MX' => 'spanish',
+        'CO' => 'spanish',
+        'AR' => 'spanish',
+        'PE' => 'spanish',
+        'CL' => 'spanish',
+        'EC' => 'spanish',
+        'FR' => 'french',
+        'PT' => 'portuguese',
+        'BR' => 'portuguese',
+        'DE' => 'german',
+        'IT' => 'italian',
+        'PL' => 'polish',
+        'RU' => 'russian',
+        'CN' => 'chinese',
+        'JP' => 'japanese',
+        'KR' => 'korean',
+        'TH' => 'thai',
+        'IN' => 'hindi',
+        'TR' => 'turkish',
+        'GR' => 'greek',
+        'DK' => 'danish',
+        'NL' => 'dutch',
+        'NO' => 'norwegian',
+        'SE' => 'swedish',
+    );
+
     // Initial class function
     public function __construct($cron = false, $lockFile = false)
     {
@@ -203,38 +231,10 @@ class MY_Controller extends CI_Controller
     {
         if (!$this->session->userdata('language'))
         {
-            $languageCodesByCountry = array(
-                'ES' => 'spanish',
-                'MX' => 'spanish',
-                'CO' => 'spanish',
-                'AR' => 'spanish',
-                'PE' => 'spanish',
-                'CL' => 'spanish',
-                'EC' => 'spanish',
-                'FR' => 'french',
-                'PT' => 'portuguese',
-                'BR' => 'portuguese',
-                'DE' => 'german',
-                'IT' => 'italian',
-                'PL' => 'polish',
-                'RU' => 'russian',
-                'CN' => 'chinese',
-                'JP' => 'japanese',
-                'KR' => 'korean',
-                'TH' => 'thai',
-                'IN' => 'hindi',
-                'TR' => 'turkish',
-                'GR' => 'greek',
-                'DK' => 'danish',
-                'NL' => 'dutch',
-                'NO' => 'norwegian',
-                'SE' => 'swedish',
-            );
-
             $languageName = $this->config->item('language');
 
-            if (isset($languageCodesByCountry[$this->countryCode])) {
-                $languageName = $languageCodesByCountry[$this->countryCode];
+            if (isset($this->languageNamesByCountry[$this->countryCode])) {
+                $languageName = $this->languageNamesByCountry[$this->countryCode];
             }
 
             $this->session->set_userdata('language', $languageName);
@@ -242,15 +242,13 @@ class MY_Controller extends CI_Controller
 
         $this->config->set_item('language', $this->session->userdata('language'));
 
-        $this->loadLanguageFile('common');
-
-        $languageFile = $this->controller;
-
+        $controllerLanguageFile = $this->controller;
         if ($this->subDir) {
-            $languageFile = $this->subDir. '/' . $languageFile;
+            $controllerLanguageFile = $this->subDir. '/' . $controllerLanguageFile;
         }
 
-        $this->loadLanguageFile($languageFile);
+        $this->loadLanguageFile('common');
+        $this->loadLanguageFile($controllerLanguageFile);
     }
 
     public function setParameters()
