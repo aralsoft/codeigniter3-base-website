@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'Hovedhjelpekategorier';
+$lang['site_rules_policies'] = 'Nettstedets regler og retningslinjer';
+$lang['further_help_info'] = 'Ytterligere hjelp og informasjon';
+$lang['index_page_title'] = 'Hjelp og støtte';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'Støtte';
+$lang['contact_page_title'] = 'Kontakt oss';
+$lang['contact_page_lead'] = 'Fortell oss dine kommentarer, spørsmål eller forslag...';
+$lang['contact_bread_crumb'] = 'Kontakt oss';
+$lang['content_page_title_1'] = 'Om oss';
+$lang['content_page_lead_1'] = 'Hva handler denne siden om...';
+$lang['content_bread_crumb_1'] = 'Om oss';
+$lang['content_1'] = '<p class="mt-3"><strong>Nettsted</strong> er et nettsted designet for å gjøre det mulig for folk å lage nettsider raskere.<br /><br/> Les vår <a href=/support/>støtteside</a> for mer informasjon.</p>';
+$lang['content_page_title_2'] = 'Produkter';
+$lang['content_page_lead_2'] = 'Produkter og tjenester vi tilbyr...';
+$lang['content_bread_crumb_2'] = 'Produkter';
+$lang['content_2'] = '<p class="mt-3"><strong>Nettsiden</strong> produkter og tjenester.</p>';
+$lang['content_page_title_3'] = 'Vanlige spørsmål';
+$lang['content_page_lead_3'] = 'Ofte stilte spørsmål...';
+$lang['content_bread_crumb_3'] = 'Vanlige spørsmål';
+$lang['content_3'] = '<p class="mt-3">Ofte stilte spørsmål til <strong>nettstedet</strong> .</p>';

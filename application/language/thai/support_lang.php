@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'หมวดหมู่ความช่วยเหลือหลัก';
+$lang['site_rules_policies'] = 'กฎและนโยบายของเว็บไซต์';
+$lang['further_help_info'] = 'ความช่วยเหลือและข้อมูลเพิ่มเติม';
+$lang['index_page_title'] = 'ช่วยเหลือและการสนับสนุน';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'สนับสนุน';
+$lang['contact_page_title'] = 'ติดต่อเรา';
+$lang['contact_page_lead'] = 'โปรดแจ้งความคิดเห็น คำถาม หรือข้อเสนอแนะของคุณให้เราทราบ...';
+$lang['contact_bread_crumb'] = 'ติดต่อเรา';
+$lang['content_page_title_1'] = 'เกี่ยวกับเรา';
+$lang['content_page_lead_1'] = 'เว็บไซต์นี้เป็นเกี่ยวกับอะไร';
+$lang['content_bread_crumb_1'] = 'เกี่ยวกับเรา';
+$lang['content_1'] = '<p class="mt-3"><strong>เว็บไซต์</strong> คือไซต์ที่ได้รับการออกแบบเพื่อให้ผู้คนสามารถสร้างเว็บไซต์ได้รวดเร็วยิ่งขึ้น<br /><br/> หากต้องการข้อมูลเพิ่มเติม โปรดอ่าน <a href=/support/>หน้าการสนับสนุน</a> ของเรา</p>';
+$lang['content_page_title_2'] = 'สินค้า';
+$lang['content_page_lead_2'] = 'ผลิตภัณฑ์และบริการที่เรานำเสนอ...';
+$lang['content_bread_crumb_2'] = 'สินค้า';
+$lang['content_2'] = '<p class="mt-3">ผลิตภัณฑ์และบริการ <strong>เว็บไซต์</strong></p>';
+$lang['content_page_title_3'] = 'คำถามที่พบบ่อย';
+$lang['content_page_lead_3'] = 'คำถามที่พบบ่อย...';
+$lang['content_bread_crumb_3'] = 'คำถามที่พบบ่อย';
+$lang['content_3'] = '<p class="mt-3"><strong>เว็บไซต์</strong> คำถามที่พบบ่อย</p>';

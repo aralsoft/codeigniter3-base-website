@@ -14,7 +14,7 @@ class Ses
 
         $this->CI->load->model('Email_logs');
         $this->CI->load->helper(array('nav'));
-        $this->CI->loadLanguageFile('library/ses');
+        $this->CI->loadLanguageFile('ses');
         $this->CI->loadLanguageFile('common');
         $this->CI->config->load('aws');
         

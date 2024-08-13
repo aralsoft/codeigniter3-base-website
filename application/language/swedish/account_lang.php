@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Register';
+$lang['do_not_have_account'] = 'Har du INTE ett konto?';
+$lang['already_member'] = 'Redan medlem?';
+$lang['forgot_password'] = 'Glömt lösenordet?';
+$lang['login_with'] = 'Eller logga in med';
+$lang['bread_crumb'] = 'Mitt konto';
+$lang['index_bread_crumb'] = 'Inloggning';
+$lang['register_bread_crumb'] = 'Register';
+$lang['forgot_password_bread_crumb'] = 'Återställ lösenord';
+$lang['index_page_title'] = 'Logga in på ditt konto';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Registrera dig som ny medlem';
+$lang['register_page_lead'] = 'Ange dina uppgifter nedan för att skapa ett nytt konto.';
+$lang['forgot_password_page_title'] = 'Återställ lösenord';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Återställ lösenord';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'Verifiera din e-postadress';
+$lang['email_verification_final_page_lead'] = '';

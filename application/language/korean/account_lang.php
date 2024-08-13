@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = '등록하다';
+$lang['do_not_have_account'] = '계정이 없으신가요?';
+$lang['already_member'] = '이미 회원이신가요?';
+$lang['forgot_password'] = '비밀번호를 잊으셨나요?';
+$lang['login_with'] = '또는 다음을 사용하여 로그인하세요';
+$lang['bread_crumb'] = '내 계정';
+$lang['index_bread_crumb'] = '로그인';
+$lang['register_bread_crumb'] = '등록하다';
+$lang['forgot_password_bread_crumb'] = '비밀번호 복구';
+$lang['index_page_title'] = '귀하의 계정에 로그인하세요';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = '신규 회원으로 등록하세요';
+$lang['register_page_lead'] = '새 계정을 만들려면 아래에 귀하의 세부 정보를 입력하세요.';
+$lang['forgot_password_page_title'] = '비밀번호 복구';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = '비밀번호 재설정';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = '이메일 주소를 확인하세요';
+$lang['email_verification_final_page_lead'] = '';

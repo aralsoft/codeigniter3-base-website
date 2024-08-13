@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Kayıt olmak';
+$lang['do_not_have_account'] = 'Hesabınız YOK mu?';
+$lang['already_member'] = 'Zaten üye misiniz?';
+$lang['forgot_password'] = 'Parolanızı mı unuttunuz ?';
+$lang['login_with'] = 'Veya Giriş Yap';
+$lang['bread_crumb'] = 'Hesabım';
+$lang['index_bread_crumb'] = 'Giriş yapmak';
+$lang['register_bread_crumb'] = 'Kayıt olmak';
+$lang['forgot_password_bread_crumb'] = 'Şifreyi Kurtar';
+$lang['index_page_title'] = 'Hesabınıza giriş yapın';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Yeni üye olarak kayıt olun';
+$lang['register_page_lead'] = 'Yeni bir hesap oluşturmak için lütfen aşağıya bilgilerinizi girin.';
+$lang['forgot_password_page_title'] = 'Şifreyi Kurtar';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Şifreyi Sıfırla';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'E-posta Adresinizi Doğrulayın';
+$lang['email_verification_final_page_lead'] = '';

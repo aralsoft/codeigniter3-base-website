@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'मुख्य सहायता श्रेणियाँ';
+$lang['site_rules_policies'] = 'साइट नियम और नीतियाँ';
+$lang['further_help_info'] = 'आगे की सहायता और जानकारी';
+$lang['index_page_title'] = 'सहायता एवं समर्थन';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'सहायता';
+$lang['contact_page_title'] = 'हमसे संपर्क करें';
+$lang['contact_page_lead'] = 'कृपया हमें अपनी टिप्पणियाँ, प्रश्न या सुझाव बताएं...';
+$lang['contact_bread_crumb'] = 'हमसे संपर्क करें';
+$lang['content_page_title_1'] = 'हमारे बारे में';
+$lang['content_page_lead_1'] = 'यह साइट किस बारे में है...';
+$lang['content_bread_crumb_1'] = 'हमारे बारे में';
+$lang['content_1'] = '<p class="mt-3"><strong>वेब साइट</strong> एक ऐसी साइट है जिसे लोगों को तेजी से वेब साइट बनाने में सक्षम बनाने के लिए डिज़ाइन किया गया है।<br /><br/> अधिक जानकारी के लिए हमारा <a href=/support/>सहायता पृष्ठ</a> पढ़ें.</p>';
+$lang['content_page_title_2'] = 'उत्पादों';
+$lang['content_page_lead_2'] = 'हमारे द्वारा प्रदान किये जाने वाले उत्पाद एवं सेवाएं...';
+$lang['content_bread_crumb_2'] = 'उत्पादों';
+$lang['content_2'] = '<p class="mt-3"><strong>वेब साइट</strong> उत्पाद एवं सेवाएँ.</p>';
+$lang['content_page_title_3'] = 'पूछे जाने वाले प्रश्न';
+$lang['content_page_lead_3'] = 'अक्सर पूछे जाने वाले प्रश्नों...';
+$lang['content_bread_crumb_3'] = 'पूछे जाने वाले प्रश्न';
+$lang['content_3'] = '<p class="mt-3"><strong>वेब साइट पर</strong> अक्सर पूछे जाने वाले प्रश्न.</p>';

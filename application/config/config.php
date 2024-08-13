@@ -33,7 +33,11 @@ $config['languages'] = array('en' => 'english',
     'th' => 'thai',
     'hi' => 'hindi',
     'tr' => 'turkish',
-    'el' => 'greek'
+    'el' => 'greek',
+    'da' => 'danish',
+    'nl' => 'dutch',
+    'no' => 'norwegian',
+    'sv' => 'swedish',
 );
 
 $config['uri_protocol']	= 'REQUEST_URI';

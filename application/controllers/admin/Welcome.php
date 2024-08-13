@@ -18,7 +18,6 @@ class Welcome extends MY_Controller {
         $results = $this->dbutil->optimize_database();
 
         $viewData = array(
-            'pagetitle' => 'Block Bet Admin - Optimize Database',
             'optimizedatabase' => 1,
             'optimizedatabaseresults' => $results
         );

@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'Principais categorias de ajuda';
+$lang['site_rules_policies'] = 'Regras e políticas do site';
+$lang['further_help_info'] = 'Mais ajuda e informações';
+$lang['index_page_title'] = 'Ajuda e Suporte';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'Apoiar';
+$lang['contact_page_title'] = 'Contate-nos';
+$lang['contact_page_lead'] = 'Por favor, envie-nos seus comentários, perguntas ou sugestões...';
+$lang['contact_bread_crumb'] = 'Contate-nos';
+$lang['content_page_title_1'] = 'Sobre nós';
+$lang['content_page_lead_1'] = 'Sobre o que é este site...';
+$lang['content_bread_crumb_1'] = 'Sobre nós';
+$lang['content_1'] = '<p class="mt-3"><strong>Web Site</strong> é um site projetado para permitir que as pessoas criem sites mais rapidamente.<br /><br/> Para mais informações, leia nossa <a href=/support/>página de Suporte</a> .</p>';
+$lang['content_page_title_2'] = 'Produtos';
+$lang['content_page_lead_2'] = 'Produtos e serviços que oferecemos...';
+$lang['content_bread_crumb_2'] = 'Produtos';
+$lang['content_2'] = '<p class="mt-3">Produtos e serviços <strong>do site</strong> .</p>';
+$lang['content_page_title_3'] = 'Perguntas frequentes';
+$lang['content_page_lead_3'] = 'Perguntas frequentes...';
+$lang['content_bread_crumb_3'] = 'Perguntas frequentes';
+$lang['content_3'] = '<p class="mt-3">Perguntas frequentes <strong>sobre o site</strong> .</p>';

@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Зарегистрироваться';
+$lang['do_not_have_account'] = 'У вас НЕТ учетной записи?';
+$lang['already_member'] = 'Вы уже являетесь участником?';
+$lang['forgot_password'] = 'Забыли пароль ?';
+$lang['login_with'] = 'Или войдите с помощью';
+$lang['bread_crumb'] = 'Мой счет';
+$lang['index_bread_crumb'] = 'Авторизоваться';
+$lang['register_bread_crumb'] = 'Зарегистрироваться';
+$lang['forgot_password_bread_crumb'] = 'Восстановить пароль';
+$lang['index_page_title'] = 'Войдите в свою учетную запись';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Зарегистрируйтесь как новый участник';
+$lang['register_page_lead'] = 'Пожалуйста, введите свои данные ниже, чтобы создать новую учетную запись.';
+$lang['forgot_password_page_title'] = 'Восстановить пароль';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Сбросить пароль';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'Подтвердите свой адрес электронной почты';
+$lang['email_verification_final_page_lead'] = '';

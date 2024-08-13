@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Registrar';
+$lang['do_not_have_account'] = 'NÃO tem uma conta?';
+$lang['already_member'] = 'Já é membro?';
+$lang['forgot_password'] = 'Esqueceu sua senha ?';
+$lang['login_with'] = 'Ou faça login com';
+$lang['bread_crumb'] = 'Minha conta';
+$lang['index_bread_crumb'] = 'Conecte-se';
+$lang['register_bread_crumb'] = 'Registrar';
+$lang['forgot_password_bread_crumb'] = 'Recuperar senha';
+$lang['index_page_title'] = 'Entre na sua conta';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Registre-se como um novo membro';
+$lang['register_page_lead'] = 'Insira suas informações abaixo para criar uma nova conta.';
+$lang['forgot_password_page_title'] = 'Recuperar senha';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Redefinir senha';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'Verifique seu endereço de e-mail';
+$lang['email_verification_final_page_lead'] = '';

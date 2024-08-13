@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'Основные категории помощи';
+$lang['site_rules_policies'] = 'Правила и политика сайта';
+$lang['further_help_info'] = 'Дополнительная помощь и информация';
+$lang['index_page_title'] = 'Помощь и поддержка';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'Поддерживать';
+$lang['contact_page_title'] = 'Связаться с нами';
+$lang['contact_page_lead'] = 'Пожалуйста, оставьте нам свои комментарии, вопросы или предложения...';
+$lang['contact_bread_crumb'] = 'Связаться с нами';
+$lang['content_page_title_1'] = 'О нас';
+$lang['content_page_lead_1'] = 'О чем этот сайт...';
+$lang['content_bread_crumb_1'] = 'О нас';
+$lang['content_1'] = '<p class="mt-3"><strong>Веб-сайт</strong> — это сайт, предназначенный для того, чтобы люди могли быстрее создавать веб-сайты.<br /><br/> Более подробную информацию можно найти на нашей <a href=/support/>странице поддержки</a> .</p>';
+$lang['content_page_title_2'] = 'Продукция';
+$lang['content_page_lead_2'] = 'Продукты и услуги, которые мы предлагаем...';
+$lang['content_bread_crumb_2'] = 'Продукция';
+$lang['content_2'] = '<p class="mt-3">Продукты и услуги <strong>веб-сайта</strong> .</p>';
+$lang['content_page_title_3'] = 'Часто задаваемые вопросы';
+$lang['content_page_lead_3'] = 'Часто задаваемые вопросы...';
+$lang['content_bread_crumb_3'] = 'Часто задаваемые вопросы';
+$lang['content_3'] = '<p class="mt-3">Часто задаваемые вопросы <strong>на веб-сайте</strong> .</p>';

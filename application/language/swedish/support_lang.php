@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'Huvudhjälpkategorier';
+$lang['site_rules_policies'] = 'Webbplatsens regler och policyer';
+$lang['further_help_info'] = 'Ytterligare hjälp och information';
+$lang['index_page_title'] = 'Hjälp &amp; Support';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'Stöd';
+$lang['contact_page_title'] = 'Kontakta oss';
+$lang['contact_page_lead'] = 'Berätta gärna för oss dina kommentarer, frågor eller förslag...';
+$lang['contact_bread_crumb'] = 'Kontakta oss';
+$lang['content_page_title_1'] = 'Om oss';
+$lang['content_page_lead_1'] = 'Vad den här sidan handlar om...';
+$lang['content_bread_crumb_1'] = 'Om oss';
+$lang['content_1'] = '<p class="mt-3"><strong>Webbplats</strong> är en webbplats utformad för att göra det möjligt för människor att skapa webbplatser snabbare.<br /><br/> Läs vår <a href=/support/>supportsida</a> för mer information.</p>';
+$lang['content_page_title_2'] = 'Produkter';
+$lang['content_page_lead_2'] = 'Produkter och tjänster vi erbjuder...';
+$lang['content_bread_crumb_2'] = 'Produkter';
+$lang['content_2'] = '<p class="mt-3"><strong>Webbplatsens</strong> produkter och tjänster.</p>';
+$lang['content_page_title_3'] = 'Vanliga frågor';
+$lang['content_page_lead_3'] = 'Vanliga frågor...';
+$lang['content_bread_crumb_3'] = 'Vanliga frågor';
+$lang['content_3'] = '<p class="mt-3"><strong>Webbplats</strong> vanliga frågor.</p>';

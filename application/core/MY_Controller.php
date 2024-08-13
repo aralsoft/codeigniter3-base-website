@@ -241,11 +241,12 @@ class MY_Controller extends CI_Controller
         $this->loadLanguageFile('common');
 
         $languageFile = $this->controller;
+
         if ($this->subDir) {
             $languageFile = $this->subDir. '/' . $languageFile;
         }
 
-        $this->loadLanguageFile('controller/'.$languageFile);
+        $this->loadLanguageFile($languageFile);
     }
 
     public function setParameters()
@@ -485,7 +486,7 @@ class MY_Controller extends CI_Controller
 
     function authenticate()
     {
-        header('WWW-Authenticate: Basic realm="Block Bet Staging Environment"');
+        header('WWW-Authenticate: Basic realm="Staging Environment"');
         header('HTTP/1.0 401 Unauthorized');
         echo "You must enter a valid login ID and password to access this resource\n";
         exit;

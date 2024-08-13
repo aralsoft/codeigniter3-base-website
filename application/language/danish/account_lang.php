@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Register';
+$lang['do_not_have_account'] = 'Har du IKKE en konto?';
+$lang['already_member'] = 'Allerede medlem?';
+$lang['forgot_password'] = 'Glemt adgangskode?';
+$lang['login_with'] = 'Eller log ind med';
+$lang['bread_crumb'] = 'Min konto';
+$lang['index_bread_crumb'] = 'Log ind';
+$lang['register_bread_crumb'] = 'Register';
+$lang['forgot_password_bread_crumb'] = 'Gendan adgangskode';
+$lang['index_page_title'] = 'Log ind på din konto';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Tilmeld dig som nyt medlem';
+$lang['register_page_lead'] = 'Indtast venligst dine oplysninger nedenfor for at oprette en ny konto.';
+$lang['forgot_password_page_title'] = 'Gendan adgangskode';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Nulstil adgangskode';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'Bekræft din e-mail-adresse';
+$lang['email_verification_final_page_lead'] = '';

@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'Główne kategorie pomocy';
+$lang['site_rules_policies'] = 'Zasady i Polityki witryny';
+$lang['further_help_info'] = 'Dalsza pomoc i informacje';
+$lang['index_page_title'] = 'Pomoc i wsparcie';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'Wsparcie';
+$lang['contact_page_title'] = 'Skontaktuj się z nami';
+$lang['contact_page_lead'] = 'Prosimy o przekazanie nam uwag, pytań i sugestii...';
+$lang['contact_bread_crumb'] = 'Skontaktuj się z nami';
+$lang['content_page_title_1'] = 'O nas';
+$lang['content_page_lead_1'] = 'O czym jest ta strona...';
+$lang['content_bread_crumb_1'] = 'O nas';
+$lang['content_1'] = '<p class="mt-3"><strong>Witryna internetowa</strong> to witryna zaprojektowana w celu umożliwienia szybszego tworzenia witryn internetowych.<br /><br/> Więcej informacji znajdziesz na naszej <a href=/support/>stronie Wsparcia</a> .</p>';
+$lang['content_page_title_2'] = 'Produkty';
+$lang['content_page_lead_2'] = 'Produkty i usługi, które oferujemy...';
+$lang['content_bread_crumb_2'] = 'Produkty';
+$lang['content_2'] = '<p class="mt-3">Produkty i usługi <strong>dostępne na stronie internetowej</strong> .</p>';
+$lang['content_page_title_3'] = 'Często zadawane pytania';
+$lang['content_page_lead_3'] = 'Często zadawane pytania...';
+$lang['content_bread_crumb_3'] = 'Często zadawane pytania';
+$lang['content_3'] = '<p class="mt-3">Często zadawane pytania <strong>na stronie internetowej</strong> .</p>';

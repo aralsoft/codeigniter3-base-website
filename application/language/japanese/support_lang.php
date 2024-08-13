@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = '主なヘルプカテゴリ';
+$lang['site_rules_policies'] = 'サイトのルールとポリシー';
+$lang['further_help_info'] = 'さらなるヘルプと情報';
+$lang['index_page_title'] = 'ヘルプとサポート';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'サポート';
+$lang['contact_page_title'] = 'お問い合わせ';
+$lang['contact_page_lead'] = 'ご意見、ご質問、ご提案などをお聞かせください。';
+$lang['contact_bread_crumb'] = 'お問い合わせ';
+$lang['content_page_title_1'] = '私たちについて';
+$lang['content_page_lead_1'] = 'このサイトについて...';
+$lang['content_bread_crumb_1'] = '私たちについて';
+$lang['content_1'] = '<p class="mt-3"><strong>Web サイトは</strong>、人々がより速く Web サイトを作成できるように設計されたサイトです。<br /><br/>詳細については、<a href=/support/>サポート ページ</a>をご覧ください。</p>';
+$lang['content_page_title_2'] = '製品';
+$lang['content_page_lead_2'] = '当社が提供する製品とサービス...';
+$lang['content_bread_crumb_2'] = '製品';
+$lang['content_2'] = '<p class="mt-3"><strong>Web サイトの</strong>製品とサービス。</p>';
+$lang['content_page_title_3'] = 'よくある質問';
+$lang['content_page_lead_3'] = 'よくある質問...';
+$lang['content_bread_crumb_3'] = 'よくある質問';
+$lang['content_3'] = '<p class="mt-3"><strong>Web サイトの</strong>よくある質問。</p>';

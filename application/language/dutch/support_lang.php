@@ -1,0 +1,23 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['main_help_cats'] = 'Belangrijkste Help-categorieën';
+$lang['site_rules_policies'] = 'Siteregels en -beleid';
+$lang['further_help_info'] = 'Verdere hulp en informatie';
+$lang['index_page_title'] = 'Hulp en ondersteuning';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = 'Steun';
+$lang['contact_page_title'] = 'Neem contact met ons op';
+$lang['contact_page_lead'] = 'Vertel ons uw opmerkingen, vragen of suggesties...';
+$lang['contact_bread_crumb'] = 'Neem contact met ons op';
+$lang['content_page_title_1'] = 'Over ons';
+$lang['content_page_lead_1'] = 'Waar deze site over gaat...';
+$lang['content_bread_crumb_1'] = 'Over ons';
+$lang['content_1'] = '<p class="mt-3"><strong>Web Site</strong> is een site die is ontworpen om mensen in staat te stellen sneller websites te maken.<br /><br/> Voor meer informatie kunt u onze <a href=/support/>Supportpagina</a> raadplegen.</p>';
+$lang['content_page_title_2'] = 'Producten';
+$lang['content_page_lead_2'] = 'Producten en diensten die wij aanbieden...';
+$lang['content_bread_crumb_2'] = 'Producten';
+$lang['content_2'] = '<p class="mt-3"><strong>Websiteproducten</strong> en -diensten.</p>';
+$lang['content_page_title_3'] = 'Veelgestelde vragen';
+$lang['content_page_lead_3'] = 'Veelgestelde vragen...';
+$lang['content_bread_crumb_3'] = 'Veelgestelde vragen';
+$lang['content_3'] = '<p class="mt-3">Veelgestelde vragen <strong>over de website</strong> .</p>';

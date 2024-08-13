@@ -33,7 +33,7 @@ class Messages
     public function __construct()
     {
         $this->CI =& get_instance();
-        $this->CI->loadLanguageFile('library/messages');
+        $this->CI->loadLanguageFile('messages');
     }
 
     public function render()

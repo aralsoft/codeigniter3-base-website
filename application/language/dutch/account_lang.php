@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['register'] = 'Register';
+$lang['do_not_have_account'] = 'Heeft u GEEN account?';
+$lang['already_member'] = 'Al lid?';
+$lang['forgot_password'] = 'Wachtwoord vergeten?';
+$lang['login_with'] = 'Of log in met';
+$lang['bread_crumb'] = 'Mijn account';
+$lang['index_bread_crumb'] = 'Login';
+$lang['register_bread_crumb'] = 'Register';
+$lang['forgot_password_bread_crumb'] = 'Wachtwoord herstellen';
+$lang['index_page_title'] = 'Log in op uw account';
+$lang['index_page_lead'] = '';
+$lang['register_page_title'] = 'Registreer als nieuw lid';
+$lang['register_page_lead'] = 'Vul hieronder uw gegevens in om een nieuw account aan te maken.';
+$lang['forgot_password_page_title'] = 'Wachtwoord herstellen';
+$lang['forgot_password_page_lead'] = '';
+$lang['forgot_password_final_page_title'] = 'Wachtwoord opnieuw instellen';
+$lang['forgot_password_final_page_lead'] = '';
+$lang['email_verification_final_page_title'] = 'Verifieer uw e-mailadres';
+$lang['email_verification_final_page_lead'] = '';

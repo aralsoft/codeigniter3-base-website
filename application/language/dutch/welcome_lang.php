@@ -1,0 +1,21 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['index_page_title'] = '';
+$lang['index_page_lead'] = '';
+$lang['bread_crumb'] = '';
+$lang['hero_h1'] = 'Skelet site';
+$lang['hero_logged_in'] = 'Ga naar je dashboard en ga aan de slag.';
+$lang['hero_logged_out'] = '<a href="/account/register">Meld u nu aan</a> en begin met het vastleggen, analyseren en plannen van uw doelen.';
+$lang['hero_logged_in_button'] = 'Begin met werken »';
+$lang['hero_logged_out_button'] = 'Registreer u direct gratis »';
+$lang['register_button'] = 'Registreer of log nu in »';
+$lang['login_with'] = 'Inloggen met';
+$lang['column_1_image'] = 'home-join.png';
+$lang['column_1_title'] = 'Register';
+$lang['column_1_text'] = 'Meld u direct en eenvoudig aan via uw e-mailadres of sociale-media-account en begin met het configureren van uw nieuwe website.';
+$lang['column_2_image'] = 'home-connect.png';
+$lang['column_2_title'] = 'Configure';
+$lang['column_2_text'] = 'Beantwoord een paar eenvoudige vragen en maak direct automatisch een volledig functionele website.';
+$lang['column_3_image'] = 'home-socialise.png';
+$lang['column_3_title'] = 'Ontwikkelen';
+$lang['column_3_text'] = 'Upload uw producten, begin met het promoten van uw eigen website en begin met het gratis verkopen van uw producten.';
