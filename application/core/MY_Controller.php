@@ -224,16 +224,20 @@ class MY_Controller extends CI_Controller
                 'TH' => 'thai',
                 'IN' => 'hindi',
                 'TR' => 'turkish',
-                'GR' => 'greek'
+                'GR' => 'greek',
+                'DK' => 'danish',
+                'NL' => 'dutch',
+                'NO' => 'norwegian',
+                'SE' => 'swedish',
             );
 
-            $languageCode = $this->config->item('language');
+            $languageName = $this->config->item('language');
 
             if (isset($languageCodesByCountry[$this->countryCode])) {
-                $languageCode = $languageCodesByCountry[$this->countryCode];
+                $languageName = $languageCodesByCountry[$this->countryCode];
             }
 
-            $this->session->set_userdata('language', $languageCode);
+            $this->session->set_userdata('language', $languageName);
         }
 
         $this->config->set_item('language', $this->session->userdata('language'));
