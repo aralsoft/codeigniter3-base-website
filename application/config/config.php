@@ -3,20 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['base_url'] = "https://skeleton.com/";
 $config['support_email'] = 'me@mydomain.com';
-
-$config['g-recaptcha-sitekey'] = '';
-$config['g-recaptcha-secret'] = '';
-$config['g-recaptcha-url'] = 'https://www.google.com/recaptcha/api/siteverify';
-
-$config['ga-tracking-id'] = '';
-
 $config['keep_user_logs'] = TRUE;
 $config['verification_email_interval'] = 60;
-
-$config['encryption_key'] = 'Mobil609!$Tuvok5174#';
-$config['index_page'] = '';
-$config['subclass_prefix'] = 'MY_';
-$config['charset'] = 'UTF-8';
 
 $config['language'] = 'english';
 $config['languages'] = array('en' => 'english',
@@ -39,6 +27,11 @@ $config['languages'] = array('en' => 'english',
     'no' => 'norwegian',
     'sv' => 'swedish',
 );
+
+$config['encryption_key'] = 'Mobil609!$Tuvok5174#';
+$config['index_page'] = '';
+$config['subclass_prefix'] = 'MY_';
+$config['charset'] = 'UTF-8';
 
 $config['uri_protocol']	= 'REQUEST_URI';
 $config['url_suffix'] = '';

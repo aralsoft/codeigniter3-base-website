@@ -15,7 +15,7 @@ $autoload['drivers'] = array();
 
 $autoload['helper'] = array('url', 'nav', 'language', 'number');
 
-$autoload['config'] = array();
+$autoload['config'] = array('google');
 
 $autoload['language'] = array();
 

@@ -20,7 +20,7 @@ class Translate extends MY_Controller
         $this->load->helper(array('directory', 'string'));
 
         $translate = new TranslateClient([
-            'keyFilePath' => APPPATH.'data/google-key-file.json'
+            'keyFilePath' => APPPATH.$this->config->item('google_oauth_key_file')
         ]);
 
         $languageFiles = getDirContents(APPPATH.'language/'.$this->config->item('language'));

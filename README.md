@@ -19,9 +19,10 @@ Improved Codeigniter v3 web site framework.
 
 ### Uses:
 
-* Bootstrap 4.3.1
-* Jquery 3.4.1
+* Bootstrap 5.3.3
+* Jquery 3.7.1
 * Google Translate API
+* Google Analytics
 * AWS API (For sending emails)
 * Maxmind API
 
