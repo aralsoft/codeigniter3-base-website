@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $lang['messages_support_email_sent'] = '感謝您與我們聯繫。我們將盡快與您聯繫。';
 $lang['messages_login_failed'] = '使用者或密碼不正確 - 登入失敗。';
-$lang['messages_password_reset_sent'] = '您的密碼重置連結即將發送。請檢查您的收件匣。';
+$lang['messages_password_reset_sent'] = '您的密碼重設連結正在發送中。請檢查您的收件匣。';
 $lang['messages_email_not_found'] = '電子郵件地址不存在。請使用您註冊時使用的電子郵件帳號。';
 $lang['messages_email_already_exists'] = '使用的電子郵件地址已註冊。請使用不同的電子郵件地址。';
 $lang['messages_password_changed'] = '您的密碼已更改。從現在開始，您應該使用新密碼登入。';
@@ -16,8 +16,8 @@ $lang['messages_verification_too_soon'] = '驗證連結請求太快了。至少<
 $lang['messages_user_updated'] = '用戶詳細資訊已更新。';
 $lang['messages_user_not_updated'] = '無法更新使用者詳細資訊 - 請<a href="/support/contact">聯絡支援人員</a>。';
 $lang['messages_old_password_invalid'] = '您輸入的目前密碼無效。';
-$lang['messages_photo_upload_info'] = '從您的電腦中選擇要上傳的圖像。為了最大限度地減少拉伸，您的照片應盡可能接近正方形，並且至少為 150 像素 x 150 像素。';
-$lang['messages_google_captcha_failed'] = '谷歌驗證碼驗證失敗。';
+$lang['messages_photo_upload_info'] = '從您的電腦中選擇要上傳的圖像。為了最大限度地減少拉伸，您的照片應盡可能接近正方形，且至少為 150 像素 x 150 像素。';
+$lang['messages_google_captcha_failed'] = 'Google 驗證碼驗證失敗。';
 $lang['messages_login_or_register'] = '註冊的好處包括，<p><ul><li>當新功能可用時取得更新。</li></ul></p>';
 $lang['messages_active_users'] = '活躍用戶。';
 $lang['messages_blocked_users'] = '被封鎖的用戶。';

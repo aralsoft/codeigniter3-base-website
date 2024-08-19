@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$lang['meta_title'] = 'XXXXX網站標題XXXXX';
-$lang['meta_description'] = 'XXXXX網站說明XXXXX';
-$lang['common_app_name'] = 'XXXXX網站標題XXXXX';
+$lang['meta_title'] = '元網站標題';
+$lang['meta_description'] = '元站點描述';
+$lang['common_app_name'] = '網站名稱';
 $lang['about_us'] = '關於我們';
 $lang['contact_us'] = '聯絡我們';
 $lang['products'] = '產品';

@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$lang['meta_title'] = 'Titre du site XXXXXXXXXX';
-$lang['meta_description'] = 'XXXXXdescriptiondusiteXXXXX';
-$lang['common_app_name'] = 'Titre du site XXXXXXXXXX';
+$lang['meta_title'] = 'Titre du site méta';
+$lang['meta_description'] = 'Description du site méta';
+$lang['common_app_name'] = 'Nom du site';
 $lang['about_us'] = 'À propos de nous';
 $lang['contact_us'] = 'Contactez-nous';
 $lang['products'] = 'Produits';

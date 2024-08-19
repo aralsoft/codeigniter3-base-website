@@ -20,4 +20,4 @@ $lang['content_2'] = '<p class="mt-3">Προϊόντα και υπηρεσίες
 $lang['content_page_title_3'] = 'Συχνές ερωτήσεις';
 $lang['content_page_lead_3'] = 'Συχνές Ερωτήσεις...';
 $lang['content_bread_crumb_3'] = 'Συχνές ερωτήσεις';
-$lang['content_3'] = '<p class="mt-3">Συχνές ερωτήσεις <strong>στον ιστότοπο</strong> .</p>';
+$lang['content_3'] = '<p class="mt-3">Συχνές ερωτήσεις <strong>για την τοποθεσία Web</strong> .</p>';
