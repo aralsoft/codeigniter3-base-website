@@ -1,7 +1,6 @@
 <!-- Main -->
-<div class="container">
-
-    <div class="h-100 p-5 bg-light border rounded-3">
+<div class="jumbotron">
+    <div class="container">
         <div class="row justify-content-center">
 
             <div class="col-md-8">
@@ -22,8 +21,11 @@
 
         </div>
     </div>
+</div>
 
-    <div class="row justify-content-center mt-3">
+<div class="container">
+    <div class="row justify-content-center">
+
     <?php for ($i = 1; $i < 4; $i++) : ?>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="media">
@@ -36,6 +38,6 @@
             </div>
         </div>
     <?php endfor; ?>
-    </div>
 
+    </div>
 </div>

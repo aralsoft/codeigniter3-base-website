@@ -1,8 +1,4 @@
 
-$(document).ready(function() {
-
-});
-
 function CopyToClipboard(id)
 {
     var r = document.createRange();

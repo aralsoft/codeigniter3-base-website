@@ -2,9 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Meta variables
-$lang['meta_title'] = 'XXXXXsitetitleXXXXX';
-$lang['meta_description'] = 'XXXXXsitedescriptionXXXXX';
-$lang['common_app_name'] = 'XXXXXsitetitleXXXXX';
+$lang['meta_title'] = 'Meta Site Title';
+$lang['meta_description'] = 'Meta Site Description';
+$lang['common_app_name'] = 'Site Name';
 
 // Page names
 $lang['about_us'] = 'About Us';
