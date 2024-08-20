@@ -19,11 +19,12 @@ Improved Codeigniter v3 web site framework.
 
 ### Uses:
 
-* Bootstrap 5.3.3
+* Bootstrap 4.3.1
 * Jquery 3.7.1
 * Google Translate API
 * Google Analytics
-* AWS API (For sending emails)
+* Google Recaptcha
+* AWS API 
 * Maxmind API
 
 ### Installation:
@@ -37,7 +38,7 @@ Improved Codeigniter v3 web site framework.
 * chmod 777 application/data
 * chmod 777 -R application/language
 * chmod 777 -R httpdocs/img/users
-* composer install (--ignore-platform-reqs if required)
+* composer install 
 * Edit httpdocs/.htaccess
 
 ### Initial Setup
@@ -46,11 +47,15 @@ Improved Codeigniter v3 web site framework.
 * For production delete config/development.txt & staging.txt
 * Replace application/data/google-key-file.json with your Google Translate API json file.
 
+### Translate Site
+
+php /var/www/html/httpdocs/index.php cli Translate
+
 ### Cron Jobs
 
 * php /var/www/html/httpdocs/index.php cli Daily
 
-#### Add here to run more frequently than every minute
+#### Add here to run cron jobs more frequently than every minute
 
 * /var/www/html/application/controllers/cli/cronJobs.sh
 
@@ -58,7 +63,3 @@ Improved Codeigniter v3 web site framework.
 
 * sed -i -e 's/\r$//' application/controllers/cli/cronJobs.sh
 * chmod 777 application/controllers/cli/cronJobs.sh
-
-### Translate Site
-
-php /var/www/html/httpdocs/index.php cli Translate
