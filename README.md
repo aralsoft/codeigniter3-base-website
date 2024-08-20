@@ -63,3 +63,5 @@ php /var/www/html/httpdocs/index.php cli Translate
 
 * sed -i -e 's/\r$//' application/controllers/cli/cronJobs.sh
 * chmod 777 application/controllers/cli/cronJobs.sh
+
+![img.png](img.png)
