@@ -9,18 +9,20 @@ class Twitterlogin
 {
     public $CI;
     private $twitterOauth;
-    private $config = array();
+    private $config;
 
     function __construct() 
     {
         $this->CI = & get_instance();
-        
+
+        $this->CI->config->load('twitter');
+
         $this->config = array(
-            'API_KEY' => 'NqHHoVbLgzKQdr8wbb9cR0DSg',
-            'API_SECRET' => 'Ta5SvAMWJvt68wUHN7c0i9KchQn8phkSkQyZxsy8W2W0U3QJH4',
-            'OAUTH_KEY' => '1043458412930129921-HhHWfKvEfrXNrSodYzGaT86Z5mzIsw',
-            'OAUTH_SECRET' => '92QwnvIxUjgy8wGijniDs769eaS9O8PHjliB1ReZk4snm',
-            'OAUTH_REDIRECT'=>'http://block.bet/account/twitter/cb'
+            'API_KEY' => $this->CI->config->item('twitter_api_key'),
+            'API_SECRET' => $this->CI->config->item('twitter_api_secret'),
+            'OAUTH_KEY' => $this->CI->config->item('twitter_oauth_key'),
+            'OAUTH_SECRET' => $this->CI->config->item('twitter_oauth_secret'),
+            'OAUTH_REDIRECT'=> $this->CI->config->item('base_url').'account/twitter/cb'
         );
 
         //Initialise twitter oauth library
