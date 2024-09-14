@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="/css/main.css" rel="stylesheet" type="text/css">
 
-        <?php if ($this->isLive && $this->config->item('g-recaptcha-sitekey')) : ?>
+        <?php if ($this->showCaptcha) : ?>
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <?php endif; ?>
 

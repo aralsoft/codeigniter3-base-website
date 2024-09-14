@@ -434,7 +434,7 @@ class Forms
 
         $formGroupClass = $this->getFormGroupClass(array('type' => 'g-recaptcha'));
 
-        if ($this->CI->config->item('g-recaptcha-sitekey') && $this->CI->isLive) {
+        if ($this->CI->showCaptcha) {
             $result .= '<div class="'.$formGroupClass.'">';
             $result .= '<div class="g-recaptcha" data-sitekey="'.$this->CI->config->item('g-recaptcha-sitekey').'"></div>';
             $result .= '</div>';

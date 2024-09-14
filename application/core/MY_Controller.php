@@ -28,6 +28,7 @@ class MY_Controller extends CI_Controller
     public $longitude = 0;
     public $accuracy_radius = 0;
     public $isLive = FALSE;
+    public $showCaptcha = FALSE;
     public $isDefaultController = FALSE;
     public $subDirectories = array('admin');
     public $defaultController = 'welcome';
@@ -82,6 +83,7 @@ class MY_Controller extends CI_Controller
         $this->cron = $cron;
         $this->lockFile = $lockFile;
         $this->isLive = $this->isLive();
+        $this->showCaptcha = $this->showCaptcha();
 
         if ($this->cron)
         {
@@ -321,6 +323,15 @@ class MY_Controller extends CI_Controller
     public function isLive(): bool
     {
         if (ENVIRONMENT == 'production' || ENVIRONMENT == 'staging') {
+            return TRUE;
+        }
+
+        return FALSE;
+    }
+
+    public function showCaptcha(): bool
+    {
+        if ($this->isLive() && $this->config->item('g-recaptcha-sitekey')) {
             return TRUE;
         }
 

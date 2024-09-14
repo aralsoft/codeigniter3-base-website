@@ -19,7 +19,7 @@ function prepareGoogleCaptcha()
 {
     $CI = get_instance();
 
-    if ($CI->config->item('g-recaptcha-sitekey') && $CI->isLive) {
+    if ($CI->showCaptcha) {
         $verify = file_get_contents($CI->config->item('g-recaptcha-url') . '?secret=' . $CI->config->item('g-recaptcha-secret') . '&response=' . $CI->input->post('g-recaptcha-response'));
         $captcha_success = json_decode($verify);
         return $captcha_success->success;
