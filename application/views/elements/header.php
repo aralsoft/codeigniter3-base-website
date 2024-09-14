@@ -58,22 +58,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php if ($this->user->isLoggedIn()) : ?>
 
                         <li class="nav-item mr-4">
+                            <span class="glyphicon glyphicon-user"></span>
                             <a href="/dashboard">
-                                <span class="glyphicon glyphicon-user"></span>
                                 <?= $this->user->getFullName() ?>
                             </a>
                         </li>
 
                         <li class="nav-item mr-4">
+                            <span class="glyphicon glyphicon-apple"></span>
                             <a href="/wall/index">
-                                <span class="glyphicon glyphicon-apple"></span>
                                 <?= getLanguageLine("my_wall") ?>
                             </a>
                         </li>
 
                         <li class="nav-item mr-4">
+                            <span class="glyphicon glyphicon-log-out"></span>
                             <a href="/account/logout">
-                                <span class="glyphicon glyphicon-log-out"></span>
                                 <?= getLanguageLine("logout") ?>
                             </a>
                         </li>
@@ -81,32 +81,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php else : ?>
 
                         <li class="nav-item mr-4">
+                            <span class="glyphicon glyphicon-log-in"></span>
                             <a href="/account/">
-                                <span class="glyphicon glyphicon-log-in"></span>
                                 <?= getLanguageLine("login") ?>
                             </a>
                         </li>
 
                         <li class="nav-item mr-4">
+                            <span class="glyphicon glyphicon-user"></span>
                             <a href="/account/register">
-                                <span class="glyphicon glyphicon-user"></span>
                                 <?= getLanguageLine("register") ?>
                             </a>
                         </li>
 
                         <?php endif; ?>
 
-                        <li class="nav-item mr-4">
+                        <li class="nav-item mr-5">
+                            <span class="glyphicon glyphicon-question-sign"></span>
                             <a href="/support">
-                                <span class="glyphicon glyphicon-question-sign"></span>
                                 <?= getLanguageLine("help") ?>
                             </a>
                         </li>
 
                         <?php if ($this->countryCode) : ?>
-                        <li class="nav-item mr-4">
-                            <span class="nav-link"><span><img src="/img/icon/globe.svg" class="img-fluid" alt="<?= $this->countryCode ?>"></span><?= $this->countryCode ?></span>
-                        </li>
+                            <li class="nav-item mr-1">
+                                <span class="glyphicon glyphicon-globe"></span>
+                                <?= $this->countryCode ?>
+                            </li>
                         <?php endif; ?>
 
                         <li class="nav-item">
