@@ -15,7 +15,7 @@ class Translate extends MY_Controller
     /**
      * Index Page for this controller.
     **/
-    public function index($language = FALSE)
+    public function index($translateLanguageCode = FALSE, $translateFile = FALSE)
     {
         $this->load->helper(array('directory', 'string'));
 
@@ -23,13 +23,13 @@ class Translate extends MY_Controller
             'keyFilePath' => APPPATH.$this->config->item('google_oauth_key_file')
         ]);
 
-        $languageFiles = getDirContents(APPPATH.'language/'.$this->config->item('language'));
-
         $languages = $this->config->item('languages');
 
-        if ($language && isset($languages[$language])) {
-            $languages = array($language => $languages[$language]);
+        if ($translateLanguageCode && isset($languages[$translateLanguageCode])) {
+            $languages = array($translateLanguageCode => $languages[$translateLanguageCode]);
         }
+
+        $languageFiles = getDirContents(APPPATH.'language/'.$this->config->item('language'));
 
         foreach($languages AS $languageCode => $languageName)
         {
@@ -37,7 +37,6 @@ class Translate extends MY_Controller
                 continue;
             }
 
-            echo "\nStarting language: ".$languageName;
             $this->cronLog("Starting language: ".$languageName);
 
             foreach ($languageFiles AS $file)
@@ -45,6 +44,12 @@ class Translate extends MY_Controller
                 if (is_dir($file)) {
                     continue;
                 }
+
+                if ($translateFile && $translateFile != basename($file)) {
+                    continue;
+                }
+
+                $this->cronLog("Translating file: ".$file);
 
                 $fileContent = file($file);
                 $fileContentTranslated = array(0 => "<?php", 1 => "defined('BASEPATH') OR exit('No direct script access allowed');");
@@ -54,36 +59,25 @@ class Translate extends MY_Controller
                     {
                         $result['text'] = '';
 
-                        if ($sentence = trim(extractSentenceFromLanguageLine($line)))
-                        {
-                            try {
-                                // Translate text from english.
-                                if (!strpos($sentence, '.png'))
-                                {
-                                    $result = $translate->translate($sentence, [
-                                        'target' => $languageCode
-                                    ]);
+                        if ($sentence = trim(extractSentenceFromLanguageLine($line))) {
+                            try
+                            {
+                                $result = $translate->translate($sentence, [
+                                    'target' => $languageCode
+                                ]);
 
-                                    if (!trim($result['text'])) {
-                                        $result['text'] = $sentence;
-                                        $this->cronLog("Translate returned false: ".$sentence." : ".$languageName);
-                                    }
-                                } else {
+                                if (!trim($result['text'])) {
                                     $result['text'] = $sentence;
+                                    $this->cronLog("Translate returned false: " . $sentence . " : " . $languageName);
                                 }
-                            } catch (Exception $e) {
-                                $this->cronLog("Translate failed: ".$sentence." : ".$languageName." --- ".$e->getMessage());
+                            }
+                            catch (Exception $e) {
                                 $result['text'] = $sentence;
+                                $this->cronLog("Translate failed: " . $sentence . " : " . $languageName . " --- " . $e->getMessage());
                             }
                         }
 
-                        if (!$text = trim($result['text'])) {
-                            $this->cronLog("Result text is false: ".$result['text']." : ".$languageName);
-                        }
-
-                        if (!strpos($text, ' ') && !strpos($text, '.png')) {
-                            $text = ucfirst($text);
-                        }
+                        $text = ucfirst(trim($result['text']));
 
                         $fileContentTranslated[] = '$lang[' . "'" . $key . "'" . '] = ' . "'" . $text . "'" . ';';
                     }
@@ -91,12 +85,13 @@ class Translate extends MY_Controller
 
                 $destinationFile = str_replace($this->config->item('language'), $languageName, $file);
 
-                if (!file_put_contents($destinationFile, implode("\n", $fileContentTranslated))) {
+                if (file_put_contents($destinationFile, implode("\n", $fileContentTranslated))) {
+                    $this->cronLog("Success updated file: ".$destinationFile);
+                } else {
                     $this->cronLog("Failed updating file: ".$destinationFile);
                 }
             }
 
-            echo "\nFinished language: ".$languageName."\n";
             $this->cronLog("Finished language: ".$languageName);
         }
 

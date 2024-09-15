@@ -11,13 +11,10 @@ $lang['hero_logged_out_button'] = '&nbsp;Register For Free Instantly &raquo;&nbs
 $lang['register_button'] = 'Register or Login Now &raquo;';
 $lang['login_with'] = 'Login With';
 
-$lang['column_1_image'] = 'home-join.png';
 $lang['column_1_title'] = 'Register';
 $lang['column_1_text'] = 'Join instantly and easily with your email or social account &amp; start configuring your new web site online.';
-$lang['column_2_image'] = 'home-connect.png';
 $lang['column_2_title'] = 'Configure';
 $lang['column_2_text'] = 'Answer a few basic questions and automatically create a new fully functional online web site instantly.';
-$lang['column_3_image'] = 'home-socialise.png';
 $lang['column_3_title'] = 'Develop';
 $lang['column_3_text'] = 'Upload your products and start marketing your own web site. Start selling your products online for free.';
 

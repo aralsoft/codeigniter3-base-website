@@ -29,7 +29,7 @@
     <?php for ($i = 1; $i < 4; $i++) : ?>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="media">
-                <img alt="Join" src="/img/home/<?= getLanguageLine('column_'.$i.'_image') ?>">
+                <img alt="<?= getLanguageLine('column_'.$i.'_title') ?>" src="/img/home/<?= $homeImages[$i] ?>">
                 <div class="media-body ml-3">
                     <h3><?= getLanguageLine('column_'.$i.'_title') ?></h3>
                     <p><?= getLanguageLine('column_'.$i.'_text') ?></p>

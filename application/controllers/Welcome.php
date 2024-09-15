@@ -8,7 +8,7 @@ class Welcome extends MY_Controller
     **/
     public function index()
     {
-
+        $this->viewData['homeImages'] = array(1 => 'home-join.png', 2 => 'home-connect.png', 3 => 'home-socialise.png');
 
         $this->load->view('index', $this->viewData);
     }
