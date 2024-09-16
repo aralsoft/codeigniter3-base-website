@@ -8,18 +8,18 @@ function isJson($string)
 
 function extractSentenceFromLanguageLine($line)
 {
-    $line = str_replace(array("\n", "\r"), '', $line);
+    if ($line = strstr($line, "= '")) {
+        return substr($line, 3);
+    }
 
-    $line = strstr($line, "= '"); //gets all text from needle on
-    $line = strstr($line, "';", true); //gets all text before needle
-
-    return substr($line, 3);
+    return FALSE;
 }
 
 function extractKeyFromLanguageLine($line)
 {
-    $line = strstr($line, "['"); //gets all text from needle on
-    $line = strstr($line, "']", true); //gets all text before needle
+    if ($line = strstr($line, "['")) {
+        return substr(strstr($line, "']", true), 2);
+    }
 
-    return substr($line, 2);
+    return FALSE;
 }

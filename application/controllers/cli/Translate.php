@@ -51,36 +51,40 @@ class Translate extends MY_Controller
 
                 $this->cronLog("Translating file: ".$file);
 
-                $fileContent = file($file);
+                $fileContent = explode("';", file_get_contents($file));
+
                 $fileContentTranslated = array(0 => "<?php", 1 => "defined('BASEPATH') OR exit('No direct script access allowed');");
 
-                foreach ($fileContent AS $line) {
-                    if ($key = extractKeyFromLanguageLine($line))
-                    {
-                        $result['text'] = '';
+                foreach ($fileContent AS $line)
+                {
+                    if (!$key = extractKeyFromLanguageLine($line)) {
+                        continue;
+                    }
 
-                        if ($sentence = trim(extractSentenceFromLanguageLine($line))) {
-                            try
-                            {
-                                $result = $translate->translate($sentence, [
-                                    'target' => $languageCode
-                                ]);
+                    $result['text'] = '';
 
-                                if (!trim($result['text'])) {
-                                    $result['text'] = $sentence;
-                                    $this->cronLog("Translate returned false: " . $sentence . " : " . $languageName);
-                                }
-                            }
-                            catch (Exception $e) {
+                    if ($sentence = trim(extractSentenceFromLanguageLine($line))) {
+                        try
+                        {
+                            $result = $translate->translate($sentence, [
+                                'target' => $languageCode
+                            ]);
+
+                            if (!$result['text']) {
                                 $result['text'] = $sentence;
-                                $this->cronLog("Translate failed: " . $sentence . " : " . $languageName . " --- " . $e->getMessage());
+                                $this->cronLog("Translate returned false: " . $sentence . " : " . $languageName);
                             }
                         }
-
-                        $text = ucfirst(trim($result['text']));
-
-                        $fileContentTranslated[] = '$lang[' . "'" . $key . "'" . '] = ' . "'" . $text . "'" . ';';
+                        catch (Exception $e) {
+                            $result['text'] = $sentence;
+                            $this->cronLog("Translate failed: " . $sentence . " : " . $languageName . " --- " . $e->getMessage());
+                        }
                     }
+
+                    $text = $result['text'];
+
+                    $fileContentTranslated[] = '$lang[' . "'" . $key . "'" . '] = ' . "'" . $text . "'" . ';';
+
                 }
 
                 $destinationFile = str_replace($this->config->item('language'), $languageName, $file);
