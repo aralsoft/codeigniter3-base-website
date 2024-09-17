@@ -13,10 +13,9 @@ class Ses
         $this->CI = &get_instance();
 
         $this->CI->load->model('Email_logs');
-        $this->CI->load->helper(array('nav'));
-        $this->CI->loadLanguageFile('ses');
-        $this->CI->loadLanguageFile('common');
         $this->CI->config->load('aws');
+
+        $this->CI->loadLanguageFile('ses');
         
         $this->options['region'] = $this->CI->config->item('aws_region');
         $this->options['version'] = $this->CI->config->item('aws_version');
