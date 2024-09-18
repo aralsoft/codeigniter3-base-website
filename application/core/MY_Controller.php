@@ -92,6 +92,8 @@ class MY_Controller extends CI_Controller
                 $this->processError('Cron script locked or unable to lock.');
                 exit;
             }
+
+            $this->lang->load('common', 'english');
         }
         else
         {
