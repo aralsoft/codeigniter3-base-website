@@ -87,13 +87,13 @@ class MY_Controller extends CI_Controller
 
         if ($this->cron)
         {
+            $this->lang->load('common', 'english');
+
             if ($this->isLocked() || !$this->lock())
             {
                 $this->processError('Cron script locked or unable to lock.');
                 exit;
             }
-
-            $this->lang->load('common', 'english');
         }
         else
         {
