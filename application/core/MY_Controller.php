@@ -248,7 +248,7 @@ class MY_Controller extends CI_Controller
 
         $controllerLanguageFile = $this->controller;
         if ($this->subDir) {
-            $controllerLanguageFile = $this->subDir. '/' . $controllerLanguageFile;
+            $controllerLanguageFile = $this->subDir.'_'.$controllerLanguageFile;
         }
 
         $this->loadLanguageFile('common');
