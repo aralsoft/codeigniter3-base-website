@@ -1,4 +1,3 @@
-.idea
 composer.lock
 
 vendor/
@@ -7,14 +6,7 @@ ssl/
 httpdocs/img/users/profile/*_profile.*
 httpdocs/img/users/uploads/*_profile.*
 
-application/tmp/*.xml
-application/tmp/*.txt
-application/tmp/*.csv
-application/tmp/*.pdf
-application/tmp/*.lock
-application/tmp/*.json
-application/tmp/*.json5
-application/tmp/*.jsonl
-
 application/logs/log-*
-application/logs/*.txt
+
+application/tmp/*
+!application/tmp/index.html

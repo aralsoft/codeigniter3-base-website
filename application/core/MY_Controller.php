@@ -463,7 +463,7 @@ class MY_Controller extends CI_Controller
                 if (fwrite($fp, time())) {
                     if (fclose($fp)) {
                         $date = date('Y-m-d');
-                        $this->cronLogFP = fopen(APPPATH.'logs/cronlog_'.$date.'.txt', 'a+');
+                        $this->cronLogFP = fopen(APPPATH.'logs/log-cron_'.$date.'.txt', 'a+');
                         $this->cronLog("Lock file created...");
                         return TRUE;
                     }
@@ -491,7 +491,7 @@ class MY_Controller extends CI_Controller
     public function cronLog($logMessage = 'No log message received.'): bool
     {
         if ($this->cronLogFP) {
-            if (fwrite($this->cronLogFP, date('Y-m-d H:i:s').' : '.$logMessage."\n")) {
+            if (fwrite($this->cronLogFP, date('H:i:s').' : '.$logMessage."\n")) {
                 return TRUE;
             }
         }

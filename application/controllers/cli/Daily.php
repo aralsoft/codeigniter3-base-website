@@ -23,7 +23,7 @@ class Daily extends MY_Controller
         $lastWeek = date('Y-m-d', strtotime('-7 days'));
 
         $files = array(
-            'cronlog_'.$lastWeek.'.txt',
+            'log-cron_'.$lastWeek.'.txt',
             'log-'.$lastWeek.'.php'
         );
 
