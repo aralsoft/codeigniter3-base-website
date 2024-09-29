@@ -463,7 +463,7 @@ class MY_Controller extends CI_Controller
                 if (fwrite($fp, time())) {
                     if (fclose($fp)) {
                         $date = date('Y-m-d');
-                        $this->cronLogFP = fopen(APPPATH.'logs/log-cron_'.$date.'.txt', 'a+');
+                        $this->cronLogFP = fopen(APPPATH.'logs/log-cron-'.$date.'.txt', 'a+');
                         $this->cronLog("Lock file created...");
                         return TRUE;
                     }
