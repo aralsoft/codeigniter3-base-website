@@ -13,16 +13,14 @@ endif;
     <div class="row">
         <div class="col-md-12">
 
-            <?= ($pageTitle = getLanguageLine(getLanguageKey('page_title'))) ? '<h2>'.$pageTitle.'</h2>' : ''; ?>
+        <?php
+        include("elements/page_title.php");
+        include("elements/bread_crumb.php");
+        include("elements/nav_tabs.php");
+        include("elements/page_lead.php");
 
-            <?php
-                include("elements/bread_crumb.php");
-                include("elements/nav_tabs.php");
-            ?>
-
-            <?= ($pageLead = getLanguageLine(getLanguageKey('page_lead'))) ? '<h4>'.$pageLead.'</h4>' : ''; ?>
-
-            <?php $this->messages->render(); ?>
+        $this->messages->render(); 
+        ?>
 
         </div>
     </div>

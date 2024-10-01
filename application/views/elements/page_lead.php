@@ -1,0 +1,1 @@
+<?= ($pageLead = getLanguageLine(getLanguageKey('page_lead'))) ? '<h4>'.$pageLead.'</h4>' : ''; ?>

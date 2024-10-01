@@ -1,6 +1,6 @@
 <?php
 
-function formatNumber($value, $attributes = array())
+function formatNumber($value, $attributes = array()): string
 {
     if (!is_numeric($value)) {
         $value = 0;
@@ -9,11 +9,10 @@ function formatNumber($value, $attributes = array())
     $format = 'number';
     $decimals = 0;
     $currency = "USD";
+    $colourCode = TRUE;
 
     foreach ($attributes AS $key => $attribute) {
-        if ($attribute) {
-            $$key = $attribute;
-        }
+        $$key = $attribute;
     }
 
     if (!isset($attributes['decimals']) && $format == 'currency') {
@@ -27,11 +26,11 @@ function formatNumber($value, $attributes = array())
     if (!isset($attributes['currency']) && $format == 'crypto') {
         $currency = 'BTC';
     }
-
+    
     switch($format)
     {
         case 'currency' :
-            $result = getCurrencySymbol($currency).' '.number_format($value, $decimals);
+            $result = getCurrencySymbol($currency).number_format($value, $decimals);
             break;
 
         case 'percentage' :
@@ -46,18 +45,20 @@ function formatNumber($value, $attributes = array())
             $result = number_format($value, $decimals);
     }
 
-    if ($value > 0) {
-        $result = '<span class="text-success">'.$result.'</span>';
-    } elseif ($value < 0) {
-        $result = '<span class="text-danger">'.$result.'</span>';
-    } else {
-        $result = '<span class="text-muted">'.$result.'</span>';
+    if ($colourCode) {
+        if ($value > 0) {
+            $result = '<span class="text-success">' . $result . '</span>';
+        } elseif ($value < 0) {
+            $result = '<span class="text-danger">' . $result . '</span>';
+        } else {
+            $result = '<span class="text-muted">' . $result . '</span>';
+        }
     }
 
     return $result;
 }
 
-function getCurrencySymbol($currency = "USD")
+function getCurrencySymbol($currency = "USD"): string
 {
     $currencySymbols = array(
         'EUR' => '&#8364;',
