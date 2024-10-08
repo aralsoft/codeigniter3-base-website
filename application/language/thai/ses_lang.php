@@ -11,4 +11,4 @@ $lang['ses_change_password_body'] = 'ที่รัก<user_name> -<br /><br />
 $lang['ses_contact_subject'] = 'คำขอติดต่อ';
 $lang['ses_contact_body'] = '<user_name> <br /><br /> <user_message>';
 $lang['ses_error_subject'] = 'ข้อผิดพลาด -<common_app_name>';
-$lang['ses_error_body'] = 'สวัสดี<br/><br/> ข้อผิดพลาด:<error_msg>';
+$lang['ses_error_body'] = 'สวัสดี<br/><br/> ความผิดพลาด:<error_msg>';

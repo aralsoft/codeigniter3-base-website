@@ -14,7 +14,7 @@ $lang['messages_verification_link_sent'] = 'Se ha enviado un enlace de verificac
 $lang['messages_verification_link_not_sent'] = 'No se pudo enviar el enlace de verificación. Inténtalo nuevamente o <a href="/support/contact">comunícate con el servicio de asistencia</a> .';
 $lang['messages_verification_too_soon'] = 'La solicitud de enlace de verificación llegó demasiado pronto. Al menos<interval> Deben pasar segundos desde la última solicitud. Inténtalo de nuevo más tarde.';
 $lang['messages_user_updated'] = 'Se han actualizado los detalles del usuario.';
-$lang['messages_user_not_updated'] = 'No se pueden actualizar los detalles del usuario. Comuníquese <a href="/support/contact">con el soporte técnico</a> .';
+$lang['messages_user_not_updated'] = 'No se pueden actualizar los detalles del usuario. <a href="/support/contact">Comuníquese con el soporte</a> .';
 $lang['messages_old_password_invalid'] = 'La contraseña ingresada actualmente no es válida.';
 $lang['messages_photo_upload_info'] = 'Elige una imagen de tu ordenador para cargarla. Para minimizar el estiramiento, tu foto debe tener una forma lo más parecida posible a un cuadrado y al menos 150 x 150 píxeles.';
 $lang['messages_google_captcha_failed'] = 'La validación del captcha de Google falló.';

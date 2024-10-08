@@ -11,7 +11,7 @@ $lang['messages_verification_success'] = 'Bekreftelse vellykket. Du har nå full
 $lang['messages_verification_required'] = 'Du er ikke et verifisert medlem. Vennligst sjekk e-posten din for bekreftelseslenken vår. <a href="/account/resendVerificationLink">Send bekreftelseslenke på nytt</a> .';
 $lang['messages_verification_failed'] = 'Ugyldig bekreftelseskode. Vennligst prøv igjen.';
 $lang['messages_verification_link_sent'] = 'Bekreftelseslenke er sendt til e-postadressen din. Vennligst sjekk innboksen din.';
-$lang['messages_verification_link_not_sent'] = 'Bekreftelseslenke kunne IKKE sendes. Vennligst prøv igjen eller <a href="/support/contact">kontakt kundestøtte</a> .';
+$lang['messages_verification_link_not_sent'] = 'Bekreftelseslenke kunne IKKE sendes. Vennligst prøv igjen eller <a href="/support/contact">kontakt brukerstøtten</a> .';
 $lang['messages_verification_too_soon'] = 'Forespørselen om bekreftelseskobling er for tidlig. I det minste<interval> sekunder må gå siden siste forespørsel. Vennligst prøv igjen senere.';
 $lang['messages_user_updated'] = 'Brukerdetaljer er oppdatert.';
 $lang['messages_user_not_updated'] = 'Kan ikke oppdatere brukerdetaljer - Ta <a href="/support/contact">kontakt med brukerstøtten</a> .';

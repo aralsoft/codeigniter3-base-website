@@ -5,7 +5,7 @@ $lang['index_page_lead'] = '';
 $lang['bread_crumb'] = '';
 $lang['hero_h1'] = '스켈레톤 사이트 이름';
 $lang['hero_logged_in'] = '대시보드로 가서 작업을 시작하세요.';
-$lang['hero_logged_out'] = '<a href="/account/register">지금 가입하여</a> 목표를 기록, 분석하고 계획해보세요.';
+$lang['hero_logged_out'] = '<a href="/account/register">지금 가입</a> 하여 목표를 기록, 분석하고 계획해보세요.';
 $lang['hero_logged_in_button'] = '작업 시작 »';
 $lang['hero_logged_out_button'] = '지금 무료로 등록하세요 »';
 $lang['register_button'] = '지금 등록하거나 로그인하세요 »';

@@ -9,7 +9,7 @@ $lang['messages_password_changed'] = 'Ditt lösenord har ändrats. Du bör logga
 $lang['messages_password_reset_code_invalid'] = 'Ogiltig eller utgången lösenordsåterställningskod. Kopiera/klistra in hela länken eller begär en ny länk.';
 $lang['messages_verification_success'] = 'Verifieringen lyckades. Du har nu full åtkomst.';
 $lang['messages_verification_required'] = 'Du är inte en verifierad medlem. Kontrollera din e-post för vår verifieringslänk. <a href="/account/resendVerificationLink">Skicka verifieringslänk igen</a> .';
-$lang['messages_verification_failed'] = 'Ogiltig verifieringskod. Vänligen försök igen.';
+$lang['messages_verification_failed'] = 'Ogiltig verifieringskod. Försök igen.';
 $lang['messages_verification_link_sent'] = 'Verifieringslänk har skickats till din e-postadress. Kontrollera din inkorg.';
 $lang['messages_verification_link_not_sent'] = 'Verifieringslänk kunde INTE skickas. Försök igen eller <a href="/support/contact">kontakta supporten</a> .';
 $lang['messages_verification_too_soon'] = 'Begäran om verifieringslänk är för tidigt. Åtminstone<interval> sekunder måste gå sedan senaste begäran. Försök igen senare.';

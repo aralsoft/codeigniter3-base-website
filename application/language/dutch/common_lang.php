@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$lang['meta_title'] = 'Meta-sitetitel';
+$lang['meta_title'] = 'Meta Site Titel';
 $lang['meta_description'] = 'Meta Site Beschrijving';
 $lang['common_app_name'] = 'Sitenaam';
 $lang['about_us'] = 'Over ons';
@@ -54,7 +54,7 @@ $lang['profile'] = 'Profiel';
 $lang['register'] = 'Register';
 $lang['seller'] = 'Verkoper';
 $lang['send_message'] = 'Bericht verzenden';
-$lang['send_password_reset_link'] = 'Stuur wachtwoord reset link';
+$lang['send_password_reset_link'] = 'Stuur wachtwoordherstellink';
 $lang['settings'] = 'Instellingen';
 $lang['status'] = 'Staat';
 $lang['spam'] = 'Nieuwsbrieven ontvangen?';

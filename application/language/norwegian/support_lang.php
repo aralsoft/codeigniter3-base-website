@@ -20,4 +20,4 @@ $lang['content_2'] = '<p class="mt-3"><strong>Nettsiden</strong> produkter og tj
 $lang['content_page_title_3'] = 'Vanlige spørsmål';
 $lang['content_page_lead_3'] = 'Ofte stilte spørsmål...';
 $lang['content_bread_crumb_3'] = 'Vanlige spørsmål';
-$lang['content_3'] = '<p class="mt-3">Ofte stilte spørsmål til <strong>nettstedet</strong> .</p>';
+$lang['content_3'] = '<p class="mt-3">Ofte stilte spørsmål <strong>til nettstedet</strong> .</p>';

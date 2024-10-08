@@ -11,4 +11,4 @@ $lang['ses_change_password_body'] = '親愛なる<user_name>、<br /><br />誰�
 $lang['ses_contact_subject'] = 'お問い合わせリクエスト';
 $lang['ses_contact_body'] = '<user_name> <br /><br /> <user_message>';
 $lang['ses_error_subject'] = 'エラー -<common_app_name>';
-$lang['ses_error_body'] = 'こんにちは<br/><br/>エラー：<error_msg>';
+$lang['ses_error_body'] = 'こんにちは<br/><br/>間違い：<error_msg>';

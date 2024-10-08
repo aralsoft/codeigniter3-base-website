@@ -11,4 +11,4 @@ $lang['ses_change_password_body'] = 'Kjære<user_name> ,<br /><br /> Vi gir deg 
 $lang['ses_contact_subject'] = 'Kontaktforespørsel';
 $lang['ses_contact_body'] = '<user_name> <br /><br /> <user_message>';
 $lang['ses_error_subject'] = 'FEIL -<common_app_name>';
-$lang['ses_error_body'] = 'Hei<br/><br/> Feil:<error_msg>';
+$lang['ses_error_body'] = 'hei<br/><br/> Feil:<error_msg>';

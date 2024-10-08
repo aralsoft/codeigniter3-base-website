@@ -16,7 +16,7 @@ $lang['messages_verification_too_soon'] = 'Doğrulama bağlantısı isteği çok
 $lang['messages_user_updated'] = 'Kullanıcı bilgileri güncellendi.';
 $lang['messages_user_not_updated'] = 'Kullanıcı bilgileri güncellenemiyor - Lütfen <a href="/support/contact">destek ekibiyle iletişime geçin</a> .';
 $lang['messages_old_password_invalid'] = 'Girdiğiniz mevcut şifre geçerli değil.';
-$lang['messages_photo_upload_info'] = 'Yüklemek için bilgisayarınızdan bir resim seçin. Esnemeyi en aza indirmek için fotoğrafınız mümkün olduğunca kare bir şekle yakın ve en az 150px x 150px olmalıdır.';
+$lang['messages_photo_upload_info'] = 'Bilgisayarınızdan yüklemek için bir resim seçin. Esnemeyi en aza indirmek için fotoğrafınız mümkün olduğunca kare bir şekle yakın ve en az 150px x 150px olmalıdır.';
 $lang['messages_google_captcha_failed'] = 'Google captcha doğrulaması başarısız oldu.';
 $lang['messages_login_or_register'] = 'Kayıt olmanın faydaları şunlardır:<p><ul><li> Yeni özellikler mevcut olduğunda güncelleme alın.</li></ul></p>';
 $lang['messages_active_users'] = 'Aktif Kullanıcılar.';

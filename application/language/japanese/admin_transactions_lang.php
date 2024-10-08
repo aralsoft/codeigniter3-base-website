@@ -5,4 +5,4 @@ $lang['index_page_lead'] = '';
 $lang['bread_crumb'] = '取引';
 $lang['list_transactions_page_title'] = '取引リスト';
 $lang['list_Transactions_bread_crumb'] = 'Txリスト';
-$lang['list_transactions'] = '取引一覧';
+$lang['list_transactions'] = '取引の一覧';

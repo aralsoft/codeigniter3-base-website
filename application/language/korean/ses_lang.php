@@ -11,4 +11,4 @@ $lang['ses_change_password_body'] = '~에게<user_name> ,<br /><br /> 누군가�
 $lang['ses_contact_subject'] = '연락 요청';
 $lang['ses_contact_body'] = '<user_name> <br /><br /> <user_message>';
 $lang['ses_error_subject'] = '오류 -<common_app_name>';
-$lang['ses_error_body'] = '안녕<br/><br/> 오류:<error_msg>';
+$lang['ses_error_body'] = '안녕<br/><br/> 실수:<error_msg>';

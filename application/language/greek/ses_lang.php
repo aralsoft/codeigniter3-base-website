@@ -11,4 +11,4 @@ $lang['ses_change_password_body'] = 'Αγαπητός<user_name> ,<br /><br /> �
 $lang['ses_contact_subject'] = 'Αίτημα επικοινωνίας';
 $lang['ses_contact_body'] = '<user_name> <br /><br /> <user_message>';
 $lang['ses_error_subject'] = 'ΣΦΑΛΜΑ -<common_app_name>';
-$lang['ses_error_body'] = 'Γεια<br/><br/> Σφάλμα:<error_msg>';
+$lang['ses_error_body'] = 'Γεια<br/><br/> Λάθος:<error_msg>';

@@ -16,7 +16,7 @@ $lang['messages_verification_too_soon'] = 'Die Anfrage für den Bestätigungslin
 $lang['messages_user_updated'] = 'Benutzerdetails wurden aktualisiert.';
 $lang['messages_user_not_updated'] = 'Benutzerdetails können nicht aktualisiert werden. <a href="/support/contact">Wenden Sie sich bitte an den Support</a> .';
 $lang['messages_old_password_invalid'] = 'Ihr aktuell eingegebenes Passwort ist ungültig.';
-$lang['messages_photo_upload_info'] = 'Wählen Sie ein Bild von Ihrem Computer zum Hochladen aus. Um eine Verzerrung zu minimieren, sollte Ihr Foto möglichst quadratisch sein und mindestens 150 x 150 Pixel groß sein.';
+$lang['messages_photo_upload_info'] = 'Wählen Sie ein Bild von Ihrem Computer zum Hochladen aus. Um eine Verzerrung zu minimieren, sollte Ihr Foto möglichst quadratisch und mindestens 150 x 150 Pixel groß sein.';
 $lang['messages_google_captcha_failed'] = 'Die Google Captcha-Validierung ist fehlgeschlagen.';
 $lang['messages_login_or_register'] = 'Zu den Vorteilen der Registrierung gehören:<p><ul><li> Erhalten Sie Updates, wenn neue Funktionen verfügbar sind.</li></ul></p>';
 $lang['messages_active_users'] = 'Aktive Benutzer.';

@@ -14,7 +14,7 @@ $lang['messages_verification_link_sent'] = 'Ссылка для проверки
 $lang['messages_verification_link_not_sent'] = 'Ссылка для проверки НЕ может быть отправлена. Попробуйте еще раз или <a href="/support/contact">свяжитесь со службой поддержки</a> .';
 $lang['messages_verification_too_soon'] = 'Запрос на ссылку проверки слишком скор. По крайней мере<interval> С момента последнего запроса должно пройти секунд. Попробуйте еще раз позже.';
 $lang['messages_user_updated'] = 'Данные пользователя обновлены.';
-$lang['messages_user_not_updated'] = 'Невозможно обновить данные пользователя. <a href="/support/contact">Обратитесь в службу поддержки</a> .';
+$lang['messages_user_not_updated'] = 'Невозможно обновить данные пользователя. Обратитесь <a href="/support/contact">в службу поддержки</a> .';
 $lang['messages_old_password_invalid'] = 'Ваш текущий введенный пароль недействителен.';
 $lang['messages_photo_upload_info'] = 'Выберите изображение на вашем компьютере для загрузки. Чтобы минимизировать растяжение, ваша фотография должна быть максимально приближена к квадратной форме и иметь размер не менее 150x150 пикселей.';
 $lang['messages_google_captcha_failed'] = 'Проверка Google captcha не пройдена.';

@@ -11,7 +11,7 @@ $lang['messages_verification_success'] = '検証に成功しました。これ�
 $lang['messages_verification_required'] = 'あなたは認証されたメンバーではありません。認証リンクが記載されたメールを確認してください。<a href="/account/resendVerificationLink">認証リンクを再送信します</a>。';
 $lang['messages_verification_failed'] = '認証コードが無効です。もう一度お試しください。';
 $lang['messages_verification_link_sent'] = '確認リンクがあなたのメールアドレスに送信されました。受信トレイを確認してください。';
-$lang['messages_verification_link_not_sent'] = '確認リンクを送信できませんでした。もう一度お試しいただくか、<a href="/support/contact">サポートにお問い合わせください</a>。';
+$lang['messages_verification_link_not_sent'] = '確認リンクを送信できませんでした。もう一度お試しいただくか、<a href="/support/contact">サポートにお問い合わせ</a>ください。';
 $lang['messages_verification_too_soon'] = '認証リンクのリクエストは早すぎます。少なくとも<interval>最後のリクエストから 秒経過する必要があります。しばらくしてからもう一度お試しください。';
 $lang['messages_user_updated'] = 'ユーザーの詳細が更新されました。';
 $lang['messages_user_not_updated'] = 'ユーザーの詳細を更新できません -<a href="/support/contact">サポートにお問い合わせ</a>ください。';

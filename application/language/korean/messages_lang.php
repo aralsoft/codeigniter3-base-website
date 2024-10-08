@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $lang['messages_support_email_sent'] = '문의해 주셔서 감사합니다. 최대한 빨리 연락드리겠습니다.';
-$lang['messages_login_failed'] = '잘못된 사용자 또는 비밀번호 - 로그인 실패.';
+$lang['messages_login_failed'] = '잘못된 사용자 또는 비밀번호로 인해 로그인이 실패했습니다.';
 $lang['messages_password_reset_sent'] = '비밀번호 재설정 링크가 전송 중입니다. 받은 편지함을 확인하세요.';
 $lang['messages_email_not_found'] = '이메일 주소가 존재하지 않습니다. 등록하신 이메일 계정을 사용하세요.';
 $lang['messages_email_already_exists'] = '사용된 이메일 주소는 이미 등록되어 있습니다. 다른 이메일 주소를 사용하세요.';
@@ -14,7 +14,7 @@ $lang['messages_verification_link_sent'] = '확인 링크가 귀하의 이메일
 $lang['messages_verification_link_not_sent'] = '확인 링크를 보낼 수 없습니다. 다시 시도하거나 <a href="/support/contact">지원팀에 문의</a> 하세요.';
 $lang['messages_verification_too_soon'] = '확인 링크 요청이 너무 이르다. 최소한<interval> 마지막 요청 이후 초가 지나야 합니다. 나중에 다시 시도하세요.';
 $lang['messages_user_updated'] = '사용자 세부정보가 업데이트되었습니다.';
-$lang['messages_user_not_updated'] = '사용자 세부 정보를 업데이트할 수 없습니다. <a href="/support/contact">지원팀에 문의하세요</a> .';
+$lang['messages_user_not_updated'] = '사용자 세부 정보를 업데이트할 수 없습니다. <a href="/support/contact">지원팀에 문의</a> 하세요.';
 $lang['messages_old_password_invalid'] = '현재 입력하신 비밀번호가 유효하지 않습니다.';
 $lang['messages_photo_upload_info'] = '컴퓨터에서 업로드할 이미지를 선택하세요. 늘어나는 것을 최소화하기 위해 사진은 가능한 한 정사각형 모양에 가깝고 최소 150px x 150px이어야 합니다.';
 $lang['messages_google_captcha_failed'] = 'Google 캡차 검증에 실패했습니다.';
@@ -25,6 +25,6 @@ $lang['messages_unverified_users'] = '검증되지 않은 사용자.';
 $lang['messages_list_transactions'] = '거래 내역.';
 $lang['messages_translate_site'] = '웹사이트가 영어에서 모든 언어로 번역되고 있습니다...';
 $lang['messages_options_updated'] = '옵션이 업데이트되었습니다.';
-$lang['messages_update_failed'] = '업데이트에 실패했습니다. 나중에 다시 시도하거나 <a href="/support/contact">지원팀에 문의</a> 하세요.';
+$lang['messages_update_failed'] = '업데이트에 실패했습니다. 나중에 다시 시도하거나 <a href="/support/contact">지원팀에 문의하세요</a> .';
 $lang['messages_added_as_affiliate'] = '귀하는 제휴업체로 등록되었습니다.';
 $lang['messages_affiliates_list'] = '제휴사 및 대차대조표 목록. 제휴사 URL은 https://base_url/account/register/affiliate_code입니다.';
