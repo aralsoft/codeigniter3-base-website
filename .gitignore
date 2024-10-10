@@ -1,6 +1,8 @@
-composer.lock
+.idea
 
+composer.lock
 vendor/
+
 ssl/
 
 httpdocs/img/users/profile/*_profile.*
