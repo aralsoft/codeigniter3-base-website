@@ -27,7 +27,7 @@ class Ses
         $this->sesInstance = new \Aws\Ses\SesClient($this->options);
     }
     
-    public function sendMyEmail($emailParams, $userid = 0)
+    public function sendMyEmail($emailParams, $userid = 0): bool
     {
         // Get current user's id
         if (!$userid) {
@@ -108,13 +108,13 @@ class Ses
             return TRUE;
         }
         catch (Exception $e) {
-            $this->CI->processError("Unable to send email: ".$e->getMessage());
+            $this->CI->processError("Unable to send email: ".$e->getMessage(), FALSE);
         }
 
         return FALSE;
     }
     
-    public function logEmail($emailParams, $message, $userid)
+    public function logEmail($emailParams, $message, $userid): void
     {
         $emailLog['user_id'] = $userid;
         $emailLog['data'] = json_encode($emailParams);
@@ -138,7 +138,7 @@ class Ses
         return str_replace('<'.$key.'>', $value, $message);
     }
 
-    public function getCode($emailParams, $userid)
+    public function getCode($emailParams, $userid): string
     {
         $this->CI->load->model('User_login_verifications');
 
@@ -161,7 +161,7 @@ class Ses
     }
 
 
-    public function sendUserVerificationLink($id, $email)
+    public function sendUserVerificationLink($id, $email): bool
     {
         $this->CI->load->model('User_email_verifications');
 

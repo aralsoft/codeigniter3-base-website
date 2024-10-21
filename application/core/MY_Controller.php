@@ -198,7 +198,7 @@ class MY_Controller extends CI_Controller
 
                 }
                 catch (Exception $e) {
-                    $this->notifyError('Maxmind API : ' . $e->getMessage());
+                    $this->processError('Maxmind API : ' . $e->getMessage());
                 }
             }
 
@@ -223,7 +223,7 @@ class MY_Controller extends CI_Controller
                     return TRUE;
                 }
 
-                $this->notifyError('Unable to add User Log.');
+                $this->processError('Unable to add User Log.');
             }
 
         }
@@ -424,19 +424,28 @@ class MY_Controller extends CI_Controller
 
         return FALSE;
     }
-    
-    public function processError($errorMessage, $status = 500)
-    {
-        $this->notifyError($errorMessage);
 
-        if ($this->cron) {
-            return;
+    public function processError($errorMessage, $errorEmail = TRUE): void
+    {
+        $errorMessage = "ERROR: ".$errorMessage;
+
+        if ($errorEmail) {
+            $this->sendErrorEmail($errorMessage);
         }
 
-        show_error($errorMessage, $status);
+        if ($this->cron) {
+            $this->cronLog($errorMessage);
+        } else {
+            if ($this->isLive) {
+                log_message('error', $errorMessage);
+            } else {
+                show_error($errorMessage);
+            }
+        }
+
     }
 
-    public function notifyError($errorMessage)
+    public function sendErrorEmail($errorMessage): void
     {
         $emailParams = array(
             'to' => $this->config->item('support_email'),
@@ -445,6 +454,14 @@ class MY_Controller extends CI_Controller
         );
 
         $this->ses->sendMyEmail($emailParams);
+    }
+
+    public function cronLog($logMessage): void
+    {
+        if ($this->cronLogFP) {
+            fwrite($this->cronLogFP, date('H:i:s').' : '.$logMessage."\n");
+        }
+
     }
 
     function isLocked(): bool
@@ -471,7 +488,7 @@ class MY_Controller extends CI_Controller
             }
         }
 
-        $this->cronLog("Lock file create FAILED...");
+        $this->processError("Lock file create FAILED...");
         return FALSE;
     }
 
@@ -484,18 +501,7 @@ class MY_Controller extends CI_Controller
             }
         }
 
-        $this->cronLog("Lock file delete FAILED: ".$this->lockFile);
-        return FALSE;
-    }
-
-    public function cronLog($logMessage = 'No log message received.'): bool
-    {
-        if ($this->cronLogFP) {
-            if (fwrite($this->cronLogFP, date('H:i:s').' : '.$logMessage."\n")) {
-                return TRUE;
-            }
-        }
-
+        $this->processError("Lock file delete FAILED: ".$this->lockFile);
         return FALSE;
     }
 

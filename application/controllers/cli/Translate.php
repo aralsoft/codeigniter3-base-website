@@ -15,7 +15,7 @@ class Translate extends MY_Controller
     /**
      * Index Page for this controller.
     **/
-    public function index($translateLanguageCode = FALSE, $translateFile = FALSE)
+    public function index($translateLanguageCode = FALSE, $translateFile = FALSE): void
     {
         $this->load->helper(array('directory', 'string'));
 
@@ -72,12 +72,12 @@ class Translate extends MY_Controller
 
                             if (!$result['text']) {
                                 $result['text'] = $sentence;
-                                $this->cronLog("Translate returned false: " . $sentence . " : " . $languageName);
+                                $this->processError("Translate returned false: " . $sentence . " : " . $languageName);
                             }
                         }
                         catch (Exception $e) {
                             $result['text'] = $sentence;
-                            $this->cronLog("Translate failed: " . $sentence . " : " . $languageName . " --- " . $e->getMessage());
+                            $this->processError("Translate failed: " . $sentence . " : " . $languageName . " --- " . $e->getMessage());
                         }
                     }
 
@@ -92,7 +92,7 @@ class Translate extends MY_Controller
                 if (file_put_contents($destinationFile, implode("\n", $fileContentTranslated))) {
                     $this->cronLog("Success updated file: ".$destinationFile);
                 } else {
-                    $this->cronLog("Failed updating file: ".$destinationFile);
+                    $this->processError("Failed updating file: ".$destinationFile);
                 }
             }
 

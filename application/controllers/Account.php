@@ -182,7 +182,7 @@ class Account extends MY_Controller
                     $this->ses->sendMyEmail($emailParams, $user['id']);
                     $this->messages->addMessage('password_reset_sent', 'success');
                 } else {
-                    $this->CI->processError("Could not create password reset record.");
+                    $this->processError("Could not create password reset record.");
                 }
 
                 $this->viewData['viewPage'] = FALSE;
