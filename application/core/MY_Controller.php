@@ -436,9 +436,8 @@ class MY_Controller extends CI_Controller
         if ($this->cron) {
             $this->cronLog($errorMessage);
         } else {
-            if ($this->isLive) {
-                log_message('error', $errorMessage);
-            } else {
+            log_message('error', $errorMessage);
+            if (!$this->isLive) {
                 show_error($errorMessage);
             }
         }
