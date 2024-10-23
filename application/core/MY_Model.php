@@ -184,7 +184,9 @@ class MY_Model extends CI_Model {
         $this->db->from($this->table);
 
         if ($query = $this->db->get()) {
-            return $query->result_array();
+            if (count($query->result_array())) {
+                return $query->result_array();
+            }
         }
 
         return FALSE;

@@ -221,8 +221,7 @@ class Dashboard extends MY_Controller
             )
         );
 
-        $users = $this->Users->get_affiliates($this->user->isAffiliate());
-        $table['data'] = $users;
+        $table['data'] = $this->Users->get_affiliates($this->user->isAffiliate());
 
         $this->load->library('tables', $table);
 
