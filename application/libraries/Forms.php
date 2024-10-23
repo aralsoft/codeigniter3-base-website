@@ -93,8 +93,17 @@ class Forms
                 'value' => '',
             );
 
-            if (isset($values['validation']) && $values['validation']) {
-                $this->CI->form_validation->set_rules($name, $this->CI->getLanguageText($name), $values['validation']);
+            if (isset($values['validation']) && $values['validation'])
+            {
+                $error_messages = array();
+
+                if (isset($values['error_messages']) && is_array($values['error_messages'])) {
+                    foreach ($values['error_messages'] as $key => $message) {
+                        $error_messages[$key] = $this->CI->getLanguageText($message);
+                    }
+                }
+
+                $this->CI->form_validation->set_rules($name, $this->CI->getLanguageText($name), $values['validation'], $error_messages);
             }
 
             if (isset($values['attrs']) && is_array($values['attrs'])) {
